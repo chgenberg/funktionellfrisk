@@ -1,5 +1,8 @@
 [phases.setup]
-nixPkgs = ["python3"]
+nixPkgs = ["nodejs", "npm"]
+
+[phases.install]
+cmds = ["npm install"]
 
 [start]
-cmd = "python3 -m http.server $PORT" 
+cmd = "node server.js" 
