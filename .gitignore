@@ -1,3 +1,6 @@
+# Scraping tools and development files (not needed for production)
+scraping-tools/
+
 # Python virtual environment
 scraper_env/
 __pycache__/
