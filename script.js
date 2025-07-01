@@ -155,6 +155,10 @@ function createAdvancedSiteCard(site) {
     const recommendationBanner = site.is_recommended ? 
         `<div class="recommendation-banner">⭐ ${site.recommendation_reason || 'REKOMMENDERAD'}</div>` : '';
     
+    // Create shortened description
+    const description = site.shortDescription || site.description || '';
+    const shortDesc = description.length > 120 ? description.substring(0, 120) + '...' : description;
+    
     return `
         <div class="${cardClass}" data-categories='${JSON.stringify(site.categories || [])}'>
             ${recommendationBanner}
@@ -162,11 +166,11 @@ function createAdvancedSiteCard(site) {
             <div class="site-header">
                 <div class="site-title-section">
                     <h3 onclick="openSiteDetails('${site.domain}')">${site.name}</h3>
-                    <div class="site-subtitle">${site.shortDescription || site.description}</div>
-                </div>
-                <div class="site-rating">
-                    <div class="stars">${createStars(site.rating)}</div>
-                    <span class="rating-number">${site.rating}/5</span>
+                    <div class="site-subtitle">${shortDesc}</div>
+                    <div class="site-rating">
+                        <div class="stars">${createStars(site.rating)}</div>
+                        <span class="rating-number">${site.rating}/5</span>
+                    </div>
                 </div>
             </div>
             
@@ -174,15 +178,15 @@ function createAdvancedSiteCard(site) {
             
             <div class="site-metrics">
                 <div class="metric">
-                    <span class="metric-label">Hastighet:</span>
+                    <span class="metric-label">Hastighet</span>
                     <span class="metric-value speed-${getSpeedClass(site.response_time)}">${formatSpeed(site.response_time)}</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Kurser:</span>
+                    <span class="metric-label">Kurser</span>
                     <span class="metric-value">${site.courses || 0}</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Språk:</span>
+                    <span class="metric-label">Språk</span>
                     <span class="metric-value">${formatLanguages(site.languages)}</span>
                 </div>
             </div>
@@ -195,11 +199,9 @@ function createAdvancedSiteCard(site) {
                 <button class="visit-btn" onclick="visitSite('${site.domain}')">
                     BESÖK HEMSIDA
                 </button>
-                <div class="secondary-actions">
-                    <button class="compare-btn" onclick="addToComparison('${site.domain}')">
-                        Jämför
-                    </button>
-                </div>
+                <button class="compare-btn" onclick="addToComparison('${site.domain}')">
+                    Jämför
+                </button>
             </div>
             
             <div class="site-card-footer">
@@ -218,7 +220,13 @@ function createBadges(site) {
     
     return `
         <div class="badges">
-            ${site.badges.map(badge => `<span class="badge badge-${badge.toLowerCase()}">${badge}</span>`).join('')}
+            ${site.badges.map(badge => {
+                const badgeClass = badge.toLowerCase().replace(/[åäö]/g, match => {
+                    const replacements = {'å': 'a', 'ä': 'a', 'ö': 'o'};
+                    return replacements[match] || match;
+                });
+                return `<span class="badge badge-${badgeClass}">${badge}</span>`;
+            }).join('')}
         </div>
     `;
 }
