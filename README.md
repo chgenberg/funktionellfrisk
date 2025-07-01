@@ -101,4 +101,4 @@ En elegant och minimalistisk jämförelsesajt för hälsocoaching-tjänster i Sv
 
 ---
 
-**Kontakt**: För frågor eller förslag, kontakta oss via sajten! 
+**Kontakt**: För frågor eller förslag, kontakta oss via sajten! # Force redeploy Tue Jul  1 07:22:08 CEST 2025
