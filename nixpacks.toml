@@ -1,8 +1,5 @@
 [phases.setup]
 nixPkgs = ["python3"]
 
-[phases.build]
-cmds = ["echo 'Static site - no build needed'"]
-
 [start]
-cmd = "python3 server.py" 
+cmd = "python3 -m http.server $PORT" 
