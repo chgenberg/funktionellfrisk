@@ -1135,8 +1135,29 @@
         
         // Initialize comparison page
         document.addEventListener('DOMContentLoaded', function() {
-            loadSelectedSitesFromURL();
-            loadComparisonCards();
+            // Wait for siteData to be available
+            if (typeof siteData !== 'undefined' && siteData.length > 0) {
+                loadSelectedSitesFromURL();
+                loadComparisonCards();
+            } else {
+                // Retry after a short delay if siteData isn't loaded yet
+                setTimeout(function() {
+                    if (typeof siteData !== 'undefined' && siteData.length > 0) {
+                        loadSelectedSitesFromURL();
+                        loadComparisonCards();
+                    } else {
+                        console.error('siteData not available');
+                        // Show error message
+                        document.getElementById('compareGrid').innerHTML = `
+                            <div class="no-selection">
+                                <h3>Data kunde inte laddas</h3>
+                                <p>Försök att ladda om sidan eller gå tillbaka till startsidan.</p>
+                                <a href="index.html" class="visit-btn">Tillbaka till startsidan</a>
+                            </div>
+                        `;
+                    }
+                }, 1000);
+            }
         });
         
         function loadSelectedSitesFromURL() {
@@ -1205,6 +1226,12 @@
         }
 
         function updateCompareFilterCounts() {
+            // Check if siteData is available
+            if (typeof siteData === 'undefined' || !siteData.length) {
+                console.log('siteData not available for filter counts');
+                return;
+            }
+            
             // Update category counts
             const categories = {
                 'alla': siteData.length,

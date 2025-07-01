@@ -3863,3 +3863,23 @@ const siteData = [
     ]
   }
 ];
+
+// Smart filters definition
+const smartFilters = {
+    'SNABBAST': (sites) => sites.filter(site => site.response_time && site.response_time < 0.5),
+    'BUDGET': (sites) => sites.filter(site => 
+        site.priceRange && (
+            site.priceRange.toLowerCase().includes('gratis') || 
+            site.priceRange.toLowerCase().includes('free') ||
+            site.priceRange.toLowerCase().includes('0') ||
+            (site.priceRange.match(/\d+/) && parseInt(site.priceRange.match(/\d+/)[0]) < 100)
+        )
+    ),
+    'HÖGKVALITET': (sites) => sites.filter(site => site.quality_score >= 85),
+    'GRATIS': (sites) => sites.filter(site => 
+        site.priceRange && (
+            site.priceRange.toLowerCase().includes('gratis') || 
+            site.priceRange.toLowerCase().includes('free')
+        )
+    )
+};
