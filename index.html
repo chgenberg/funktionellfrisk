@@ -207,6 +207,16 @@
     </footer>
 
     <script src="site-data.js"></script>
+    <script>
+        // DEBUG: Check if site-data.js loaded
+        console.log('🔍 HTML DEBUG: site-data.js loaded, typeof siteData:', typeof siteData);
+        if (typeof siteData !== 'undefined') {
+            console.log('🔍 HTML DEBUG: siteData length:', siteData.length);
+            console.log('🔍 HTML DEBUG: First site:', siteData[0]);
+        } else {
+            console.error('🚨 HTML DEBUG: siteData is undefined!');
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html> 

@@ -1,6 +1,20 @@
 // SVERIGES MEST AVANCERADE HÄLSOJÄMFÖRELSEPLATTFORM
 // AI-driven recommendations & smart filtering
 
+// DEBUG: Check if siteData is available immediately
+console.log('🔍 DEBUG: Script loading...');
+console.log('🔍 DEBUG: typeof siteData:', typeof siteData);
+console.log('🔍 DEBUG: window.siteData:', typeof window.siteData);
+
+// Try to access siteData in different ways
+setTimeout(() => {
+    console.log('🔍 DEBUG after 100ms: typeof siteData:', typeof siteData);
+    console.log('🔍 DEBUG after 100ms: siteData length:', typeof siteData !== 'undefined' ? siteData.length : 'undefined');
+    if (typeof siteData !== 'undefined' && siteData.length > 0) {
+        console.log('🔍 DEBUG: First site:', siteData[0]);
+    }
+}, 100);
+
 let currentFilter = 'alla';
 let currentSmartFilter = null;
 let currentLanguageFilter = 'alla';
@@ -811,11 +825,13 @@ function closeFilterPanel() {
 function updateFilterCounts() {
     // Check if siteData is available
     if (typeof siteData === 'undefined' || !siteData.length) {
-        console.log('siteData not available for filter counts');
+        console.log('🚨 DEBUG: siteData not available for filter counts');
+        console.log('🚨 DEBUG: typeof siteData:', typeof siteData);
+        console.log('🚨 DEBUG: siteData length:', typeof siteData !== 'undefined' ? siteData.length : 'undefined');
         return;
     }
     
-    console.log('Updating filter counts with', siteData.length, 'sites');
+    console.log('✅ DEBUG: Updating filter counts with', siteData.length, 'sites');
     
     // Update category counts
     const categories = {
