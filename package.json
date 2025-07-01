@@ -1,7 +1,7 @@
 {
   "name": "funktionellfrisk",
-  "version": "1.0.0",
-  "description": "Health comparison platform",
+  "version": "1.0.1",
+  "description": "Health comparison platform - 123 sites, no social media",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -9,4 +9,4 @@
   "engines": {
     "node": ">=18.0.0"
   }
-} // FORCE RAILWAY SYNC - 2025-07-01 08:19:27
+}
