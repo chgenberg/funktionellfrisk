@@ -657,76 +657,125 @@
         @media (max-width: 768px) {
             .compare-container {
                 padding: 20px 16px;
+                overflow-x: hidden;
             }
             
             .compare-header {
-                margin-bottom: 30px;
-                padding-top: 10px;
+                margin-bottom: 24px;
+                padding-top: 0;
             }
             
             .compare-header h1 {
-                font-size: 28px;
+                font-size: 26px;
                 margin-bottom: 12px;
+                line-height: 1.2;
             }
             
             .compare-header p {
-                font-size: 16px;
+                font-size: 15px;
+                line-height: 1.4;
+                padding: 0 8px;
             }
             
             .back-button {
-                padding: 10px 20px;
-                font-size: 15px;
+                padding: 10px 16px;
+                font-size: 14px;
                 margin-bottom: 20px;
+                border-radius: 8px;
             }
             
             .selected-sites-info {
                 padding: 16px;
                 margin-bottom: 20px;
+                border-radius: 8px;
             }
             
             .selected-sites-info h3 {
                 font-size: 16px;
+                margin-bottom: 8px;
+            }
+            
+            .selected-sites-info p {
+                font-size: 14px;
+                line-height: 1.4;
             }
             
             .compare-scroll-container {
                 margin: 0 -16px;
-                padding: 0 16px 30px;
+                padding: 0 16px 20px;
             }
             
             .compare-grid {
                 gap: 16px;
+                padding-bottom: 16px;
             }
             
             .compare-card {
-                min-width: 300px;
-                max-width: 300px;
-                padding: 28px;
+                min-width: 280px;
+                max-width: 280px;
+                padding: 24px 20px;
             }
             
             .compare-card h3 {
                 font-size: 20px;
+                line-height: 1.2;
+                margin-bottom: 6px;
             }
             
             .compare-domain {
+                font-size: 13px;
+                margin-bottom: 16px;
+            }
+            
+            .compare-rating {
+                margin-bottom: 16px;
+                padding-bottom: 16px;
+            }
+            
+            .stars {
                 font-size: 14px;
+            }
+            
+            .rating-number {
+                font-size: 13px;
             }
             
             .compare-badges {
                 gap: 6px;
+                margin-bottom: 16px;
+                display: flex;
+                flex-wrap: wrap;
             }
             
             .badge {
-                font-size: 10px;
-                padding: 3px 8px;
+                font-size: 9px;
+                padding: 4px 8px;
+                white-space: nowrap;
+            }
+            
+            .compare-quality-meter {
+                padding: 14px;
+                margin-bottom: 16px;
+            }
+            
+            .quality-label {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            
+            .quality-label strong {
+                font-size: 18px;
             }
             
             .compare-stats {
-                padding: 16px;
+                padding: 0;
+                margin: 16px 0;
             }
             
             .stat-row {
-                margin: 8px 0;
-                padding: 6px 0;
+                margin: 0;
+                padding: 10px 0;
+                font-size: 13px;
             }
             
             .stat-label,
@@ -734,50 +783,163 @@
                 font-size: 13px;
             }
             
+            .description {
+                font-size: 14px;
+                line-height: 1.5;
+                margin: 16px 0;
+            }
+            
+            .specialties {
+                margin: 16px 0;
+            }
+            
             .specialties h4,
             .social-section h4 {
-                font-size: 14px;
+                font-size: 13px;
+                margin-bottom: 10px;
             }
             
             .specialty-tag {
-                font-size: 11px;
+                font-size: 10px;
                 padding: 4px 8px;
+                margin: 2px;
+            }
+            
+            .social-section {
+                margin: 16px 0;
+                padding-top: 16px;
+            }
+            
+            .compare-social-icons {
+                gap: 8px;
+            }
+            
+            .social-icon {
+                width: 32px;
+                height: 32px;
+                border-radius: 8px;
+            }
+            
+            .social-icon svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .card-actions {
+                padding-top: 20px;
+            }
+            
+            .visit-btn {
+                padding: 12px 24px;
+                font-size: 14px;
+                border-radius: 10px;
             }
             
             .scroll-hint {
-                font-size: 13px;
-                margin-top: 10px;
+                font-size: 12px;
+                margin-top: 16px;
+                padding: 8px;
             }
             
             .compare-controls {
-                flex-direction: column;
+                flex-direction: row;
                 gap: 12px;
-                padding: 16px;
+                padding: 12px 0;
+                margin-bottom: 20px;
+                justify-content: center;
             }
             
             .show-all-btn,
             .filter-btn {
                 padding: 10px 16px;
                 font-size: 13px;
-                width: 100%;
-                max-width: 200px;
+                width: auto;
+                max-width: none;
+                flex: 1;
+                max-width: 160px;
             }
             
+            /* Filter panel mobile */
             .filter-panel {
-                padding: 30px 20px;
+                width: 100%;
+                max-width: 100%;
+                right: -100%;
+                padding: 24px 16px;
+            }
+            
+            .filter-panel.active {
+                right: 0;
+            }
+            
+            .filter-panel-header {
+                margin-bottom: 24px;
+                padding-bottom: 16px;
             }
             
             .filter-panel-header h3 {
+                font-size: 22px;
+            }
+            
+            .close-filter-btn {
                 font-size: 24px;
+                width: 36px;
+                height: 36px;
+            }
+            
+            .filter-section {
+                margin-bottom: 24px;
             }
             
             .filter-section h4 {
-                font-size: 14px;
+                font-size: 13px;
+                margin-bottom: 12px;
+            }
+            
+            .filter-options {
+                gap: 6px;
             }
             
             .filter-option {
                 padding: 10px 14px;
                 font-size: 14px;
+                border-radius: 10px;
+            }
+            
+            .filter-option .count {
+                font-size: 12px;
+            }
+            
+            .reset-filters-btn {
+                padding: 12px;
+                font-size: 14px;
+                margin-top: 20px;
+            }
+            
+            /* No selection state */
+            .no-selection {
+                padding: 40px 20px;
+                margin: 20px 0;
+            }
+            
+            .no-selection h3 {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+            
+            .no-selection p {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            
+            /* Footer */
+            .site-footer {
+                padding: 24px 16px;
+                margin-top: 32px;
+            }
+            
+            .site-footer p {
+                font-size: 13px;
+                line-height: 1.5;
             }
         }
         
