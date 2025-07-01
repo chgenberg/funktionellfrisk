@@ -2,3 +2,4 @@ Tue Jul  1 15:54:45 CEST 2025
 // Vercel deployment trigger Tue Jul  1 23:28:38 CEST 2025
 // Vercel sync fix Tue Jul  1 23:57:13 CEST 2025
 // HTTPS test Wed Jul  2 00:01:40 CEST 2025
+// Railway sync fix Wed Jul  2 00:14:18 CEST 2025
