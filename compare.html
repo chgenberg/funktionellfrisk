@@ -1139,12 +1139,14 @@
             if (typeof siteData !== 'undefined' && siteData.length > 0) {
                 loadSelectedSitesFromURL();
                 loadComparisonCards();
+                updateCompareFilterCounts(); // Update filter counts when data is available
             } else {
                 // Retry after a short delay if siteData isn't loaded yet
                 setTimeout(function() {
                     if (typeof siteData !== 'undefined' && siteData.length > 0) {
                         loadSelectedSitesFromURL();
                         loadComparisonCards();
+                        updateCompareFilterCounts(); // Update filter counts when data is available
                     } else {
                         console.error('siteData not available');
                         // Show error message
@@ -1216,7 +1218,11 @@
             } else {
                 panel.classList.add('active');
                 backdrop.classList.add('active');
-                updateCompareFilterCounts();
+                // Only update counts if they haven't been set yet
+                const firstCount = document.querySelector('#compareCategoryFilters .count');
+                if (firstCount && firstCount.textContent === '0') {
+                    updateCompareFilterCounts();
+                }
             }
         }
 
@@ -1231,6 +1237,8 @@
                 console.log('siteData not available for filter counts');
                 return;
             }
+            
+            console.log('Updating filter counts with', siteData.length, 'sites');
             
             // Update category counts
             const categories = {
