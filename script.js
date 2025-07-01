@@ -303,13 +303,111 @@ function setupAutocomplete(input) {
         ...siteData.map(site => site.name),
         ...siteData.flatMap(site => site.specialties || []),
         ...siteData.flatMap(site => site.categories || [])
-    ].filter((item, index, arr) => arr.indexOf(item) === index);
+    ].filter((item, index, arr) => arr.indexOf(item) === index).sort();
     
-    // Simple autocomplete implementation
-    input.addEventListener('focus', function() {
-        // Create dropdown with suggestions
-        createAutocompleteDropdown(input, suggestions);
+    let autocompleteContainer = null;
+    
+    // Create autocomplete on input
+    input.addEventListener('input', function() {
+        const query = this.value.toLowerCase().trim();
+        
+        // Remove existing dropdown
+        removeAutocompleteDropdown();
+        
+        if (query.length < 2) return;
+        
+        // Filter suggestions
+        const filteredSuggestions = suggestions.filter(suggestion => 
+            suggestion.toLowerCase().includes(query)
+        ).slice(0, 8); // Max 8 suggestions
+        
+        if (filteredSuggestions.length > 0) {
+            createAutocompleteDropdown(input, filteredSuggestions, query);
+        }
     });
+    
+    // Hide dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!input.contains(e.target) && !autocompleteContainer?.contains(e.target)) {
+            removeAutocompleteDropdown();
+        }
+    });
+    
+    // Hide dropdown on escape
+    input.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            removeAutocompleteDropdown();
+        }
+    });
+    
+    function createAutocompleteDropdown(inputElement, suggestions, query) {
+        removeAutocompleteDropdown();
+        
+        autocompleteContainer = document.createElement('div');
+        autocompleteContainer.className = 'autocomplete-dropdown';
+        
+        // Position dropdown
+        const rect = inputElement.getBoundingClientRect();
+        autocompleteContainer.style.cssText = `
+            position: absolute;
+            top: ${rect.bottom + window.scrollY}px;
+            left: ${rect.left + window.scrollX}px;
+            width: ${rect.width}px;
+            background: white;
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            max-height: 300px;
+            overflow-y: auto;
+        `;
+        
+        suggestions.forEach((suggestion, index) => {
+            const item = document.createElement('div');
+            item.className = 'autocomplete-item';
+            item.style.cssText = `
+                padding: 12px 16px;
+                cursor: pointer;
+                border-bottom: 1px solid #f3f4f6;
+                transition: background-color 0.2s;
+            `;
+            
+            // Highlight matching text
+            const regex = new RegExp(`(${query})`, 'gi');
+            const highlightedText = suggestion.replace(regex, '<strong style="color: #2d6a4f;">$1</strong>');
+            item.innerHTML = highlightedText;
+            
+            // Hover effects
+            item.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#f9fafb';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'transparent';
+            });
+            
+            // Click to select
+            item.addEventListener('click', function() {
+                inputElement.value = suggestion;
+                removeAutocompleteDropdown();
+                
+                // Trigger search
+                const event = new Event('input', { bubbles: true });
+                inputElement.dispatchEvent(event);
+            });
+            
+            autocompleteContainer.appendChild(item);
+        });
+        
+        document.body.appendChild(autocompleteContainer);
+    }
+    
+    function removeAutocompleteDropdown() {
+        if (autocompleteContainer) {
+            autocompleteContainer.remove();
+            autocompleteContainer = null;
+        }
+    }
 }
 
 function setupPersonalizationEngine() {
