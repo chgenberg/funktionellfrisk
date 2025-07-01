@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jämför Hälsoföretag - Detaljerad jämförelse</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .compare-container {
+            max-width: 100%;
+            padding: 40px 22px;
+            background: var(--off-white);
+            min-height: 100vh;
+        }
+        
+        .compare-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        .compare-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.003em;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+        
+        .compare-header p {
+            font-size: 21px;
+            color: var(--dark-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--accent-green);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-green);
+        }
+        
+        .back-button:hover {
+            background: var(--accent-green);
+            color: white;
+            transform: translateX(-5px);
+        }
+        
+        .selected-sites-info {
+            background: rgba(45, 106, 79, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .selected-sites-info h3 {
+            color: #2d6a4f;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .filter-section {
+            margin-bottom: 40px;
+        }
+        
+        .compare-scroll-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 40px;
+            margin: 0 -22px;
+            padding: 0 22px 40px;
+            position: relative;
+        }
+        
+        .compare-scroll-container::after {
+            content: none;
+        }
+        
+        .compare-grid {
+            display: flex;
+            gap: 24px;
+            min-width: fit-content;
+            padding-bottom: 20px;
+        }
+        
+        .compare-card {
+            background: white;
+            border-radius: 24px;
+            padding: 36px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            min-width: 360px;
+            max-width: 360px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(29, 29, 31, 0.06);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .compare-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2d6a4f 0%, #52b788 50%, #2d6a4f 100%);
+        }
+        
+        .compare-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(45, 106, 79, 0.15), 0 4px 10px rgba(45, 106, 79, 0.1);
+        }
+        
+        .compare-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #2d6a4f 0%, #52b788 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .compare-card:hover::after {
+            opacity: 1;
+        }
+        
+        .compare-card.recommended {
+            border: 2px solid #2d6a4f;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
+        }
+        
+        .compare-card.recommended::before {
+            height: 6px;
+        }
+        
+        .compare-card h3 {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        
+        .compare-domain {
+            color: var(--accent-green);
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .compare-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .compare-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .compare-quality-meter {
+            margin-bottom: 20px;
+            padding: 16px;
+            background: linear-gradient(135deg, rgba(45, 106, 79, 0.05) 0%, rgba(82, 183, 136, 0.05) 100%);
+            border-radius: 12px;
+        }
+        
+        .compare-stats {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(45, 106, 79, 0.05);
+            border-radius: 12px;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 12px 0;
+            padding: 8px 0;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+        
+        .stat-value {
+            font-size: 14px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        .specialties {
+            margin-top: 20px;
+        }
+        
+        .specialties h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+        
+        .specialty-tag {
+            display: inline-block;
+            background: rgba(45, 106, 79, 0.08);
+            color: #2d6a4f;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 500;
+            margin: 4px 4px 4px 0;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(45, 106, 79, 0.1);
+        }
+        
+        .specialty-tag:hover {
+            background: rgba(45, 106, 79, 0.15);
+            border-color: rgba(45, 106, 79, 0.2);
+            transform: translateY(-1px);
+        }
+        
+        .social-section {
+            margin-top: 20px;
+        }
+        
+        .social-section h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+        
+        .compare-social-icons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        
+        .scroll-hint {
+            text-align: center;
+            color: #86868b;
+            font-size: 13px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .scroll-hint:hover {
+            opacity: 1;
+        }
+        
+        .scroll-hint svg {
+            animation: scrollArrow 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes scrollArrow {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(4px); }
+        }
+        
+        .no-selection {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .no-selection h3 {
+            color: #2d6a4f;
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+        
+        .no-selection p {
+            color: #6e6e73;
+            margin-bottom: 24px;
+        }
+        
+        .show-all-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0;
+        }
+        
+        .show-all-btn:hover {
+            background: #1b5e3f;
+            transform: translateY(-1px);
+        }
+        
+        .compare-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+        
+        .compare-controls .show-all-btn,
+        .compare-controls .filter-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            background: #2d6a4f;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0;
+        }
+        .compare-controls .show-all-btn:hover,
+        .compare-controls .filter-btn:hover {
+            background: #1b5e3f;
+            transform: translateY(-1px);
+        }
+        
+        /* Ensure equal heights */
+        .compare-controls .show-all-btn span,
+        .compare-controls .filter-btn span {
+            line-height: 20px;
+        }
+        
+        /* Card content sections */
+        .compare-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 4px;
+            letter-spacing: -0.02em;
+        }
+        
+        .compare-domain {
+            color: #6e6e73;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .compare-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .compare-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 24px;
+            min-height: 32px;
+        }
+        
+        .compare-quality-meter {
+            margin-bottom: 24px;
+            padding: 20px;
+            background: rgba(45, 106, 79, 0.04);
+            border-radius: 16px;
+            border: 1px solid rgba(45, 106, 79, 0.08);
+        }
+        
+        .compare-stats {
+            margin: 24px 0;
+            padding: 0;
+            background: transparent;
+            border-radius: 0;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+            transition: all 0.2s ease;
+            border-radius: 8px;
+        }
+        
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-row:hover {
+            background: rgba(0, 0, 0, 0.02);
+            padding: 12px 8px;
+            margin: 0 -8px;
+        }
+        
+        .description {
+            color: #6e6e73;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+            flex-grow: 1;
+        }
+        
+        .specialties {
+            margin: -16px 0 24px 0;
+            padding-top: 0;
+            border-top: none;
+        }
+        
+        .specialties h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .social-section {
+            margin: 24px 0;
+            padding-top: 24px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .social-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .compare-social-icons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        /* Card actions - centered button */
+        .card-actions {
+            margin-top: auto;
+            padding-top: 32px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .visit-btn {
+            background: #2d6a4f;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .visit-btn:hover {
+            background: #1b5e3f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(45, 106, 79, 0.2);
+        }
+        
+        .visit-btn svg {
+            transition: transform 0.3s ease;
+        }
+        
+        .visit-btn:hover svg {
+            transform: translate(2px, -2px);
+        }
+        
+        /* Enhanced badge styles */
+        .badge {
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+        }
+        
+        .badge-gratis {
+            background: rgba(52, 211, 153, 0.1);
+            color: #10b981;
+            border-color: rgba(52, 211, 153, 0.2);
+        }
+        
+        .badge-budget {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+        
+        .badge-premium {
+            background: rgba(168, 85, 247, 0.1);
+            color: #a855f7;
+            border-color: rgba(168, 85, 247, 0.2);
+        }
+        
+        .badge-snabb {
+            background: rgba(251, 191, 36, 0.1);
+            color: #f59e0b;
+            border-color: rgba(251, 191, 36, 0.2);
+        }
+        
+        .badge-populär {
+            background: rgba(236, 72, 153, 0.1);
+            color: #ec4899;
+            border-color: rgba(236, 72, 153, 0.2);
+        }
+        
+        /* Social icons styling */
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(45, 106, 79, 0.08);
+            transition: all 0.3s ease;
+            color: #2d6a4f;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: rgba(45, 106, 79, 0.12);
+        }
+        
+        /* Quality meter styles */
+        .quality-label {
+            font-size: 13px;
+            color: #6e6e73;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .quality-label strong {
+            color: #1d1d1f;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .quality-bar {
+            height: 8px;
+            background: rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .quality-fill {
+            height: 100%;
+            border-radius: 8px;
+            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quality-fill.excellent {
+            background: linear-gradient(90deg, #2d6a4f 0%, #52b788 100%);
+        }
+        
+        .quality-fill.good {
+            background: linear-gradient(90deg, #f4a261 0%, #e76f51 100%);
+        }
+        
+        .quality-fill.average {
+            background: linear-gradient(90deg, #e63946 0%, #d62828 100%);
+        }
+        
+        .quality-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+            animation: shimmer 2s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        /* Recommendation banner */
+        .recommendation-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, #2d6a4f 0%, #52b788 100%);
+            color: white;
+            text-align: center;
+            padding: 8px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border-radius: 24px 24px 0 0;
+        }
+        
+        @media (max-width: 768px) {
+            .compare-container {
+                padding: 20px 16px;
+            }
+            
+            .compare-header {
+                margin-bottom: 30px;
+                padding-top: 10px;
+            }
+            
+            .compare-header h1 {
+                font-size: 28px;
+                margin-bottom: 12px;
+            }
+            
+            .compare-header p {
+                font-size: 16px;
+            }
+            
+            .back-button {
+                padding: 10px 20px;
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .selected-sites-info {
+                padding: 16px;
+                margin-bottom: 20px;
+            }
+            
+            .selected-sites-info h3 {
+                font-size: 16px;
+            }
+            
+            .compare-scroll-container {
+                margin: 0 -16px;
+                padding: 0 16px 30px;
+            }
+            
+            .compare-grid {
+                gap: 16px;
+            }
+            
+            .compare-card {
+                min-width: 300px;
+                max-width: 300px;
+                padding: 28px;
+            }
+            
+            .compare-card h3 {
+                font-size: 20px;
+            }
+            
+            .compare-domain {
+                font-size: 14px;
+            }
+            
+            .compare-badges {
+                gap: 6px;
+            }
+            
+            .badge {
+                font-size: 10px;
+                padding: 3px 8px;
+            }
+            
+            .compare-stats {
+                padding: 16px;
+            }
+            
+            .stat-row {
+                margin: 8px 0;
+                padding: 6px 0;
+            }
+            
+            .stat-label,
+            .stat-value {
+                font-size: 13px;
+            }
+            
+            .specialties h4,
+            .social-section h4 {
+                font-size: 14px;
+            }
+            
+            .specialty-tag {
+                font-size: 11px;
+                padding: 4px 8px;
+            }
+            
+            .scroll-hint {
+                font-size: 13px;
+                margin-top: 10px;
+            }
+            
+            .compare-controls {
+                flex-direction: column;
+                gap: 12px;
+                padding: 16px;
+            }
+            
+            .show-all-btn,
+            .filter-btn {
+                padding: 10px 16px;
+                font-size: 13px;
+                width: 100%;
+                max-width: 200px;
+            }
+            
+            .filter-panel {
+                padding: 30px 20px;
+            }
+            
+            .filter-panel-header h3 {
+                font-size: 24px;
+            }
+            
+            .filter-section h4 {
+                font-size: 14px;
+            }
+            
+            .filter-option {
+                padding: 10px 14px;
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .compare-container {
+                padding: 16px 12px;
+            }
+            
+            .compare-header h1 {
+                font-size: 24px;
+            }
+            
+            .compare-header p {
+                font-size: 14px;
+            }
+            
+            .back-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            
+            .compare-card {
+                min-width: 260px;
+                max-width: 260px;
+                padding: 16px;
+            }
+            
+            .compare-card h3 {
+                font-size: 18px;
+            }
+            
+            .visit-btn {
+                padding: 12px 20px;
+                font-size: 13px;
+            }
+            
+            .no-selection {
+                padding: 40px 16px;
+            }
+            
+            .no-selection h3 {
+                font-size: 20px;
+            }
+            
+            .no-selection p {
+                font-size: 14px;
+            }
+        }
+        
+        /* iOS specific fixes for compare page */
+        @supports (-webkit-touch-callout: none) {
+            .compare-scroll-container {
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .filter-toggle-btn-inline {
+                -webkit-tap-highlight-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="compare-container">
+        <a href="index.html" class="back-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Tillbaka till startsidan
+        </a>
+        
+        <div class="compare-header">
+            <h1>JÄMFÖR HÄLSOFÖRETAG</h1>
+            <p>Detaljerad jämförelse med teknisk data, kvalitetspoäng och omfattande information</p>
+        </div>
+        
+        <div id="selectedSitesInfo" class="selected-sites-info" style="display: none;">
+            <h3>🎯 Dina valda sajter att jämföra</h3>
+            <p id="selectedSitesList"></p>
+            <button class="show-all-btn" onclick="showAllSites()">Visa alla företag istället</button>
+        </div>
+        
+        <div class="compare-controls">
+            <button class="show-all-btn" onclick="showAllSites()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Visa alla företag</span>
+            </button>
+            
+            <button class="filter-btn" onclick="toggleCompareFilterPanel()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Filter</span>
+            </button>
+        </div>
+        
+        <!-- Filter Panel for Compare Page -->
+        <div class="filter-backdrop" onclick="closeCompareFilterPanel()"></div>
+        <div class="filter-panel" id="compareFilterPanel">
+            <div class="filter-panel-header">
+                <h3>Filtrera jämförelse</h3>
+                <button class="close-filter-btn" onclick="closeCompareFilterPanel()">×</button>
+            </div>
+            
+            <div class="filter-section">
+                <h4>Kategorier</h4>
+                <div class="filter-options" id="compareCategoryFilters">
+                    <div class="filter-option active" data-filter="alla" onclick="applyCompareFilter('alla', 'category')">
+                        <span>Alla kategorier</span>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="filter-option" data-filter="recommended" onclick="applyCompareFilter('recommended', 'category')">
+                        <span>Topprekommendationer</span>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="filter-option" data-filter="coaching" onclick="applyCompareFilter('coaching', 'category')">
+                        <span>Coaching</span>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="filter-option" data-filter="nutrition" onclick="applyCompareFilter('nutrition', 'category')">
+                        <span>Nutrition</span>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="filter-option" data-filter="supplements" onclick="applyCompareFilter('supplements', 'category')">
+                        <span>Kosttillskott</span>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="filter-option" data-filter="fitness" onclick="applyCompareFilter('fitness', 'category')">
+                        <span>Träning</span>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="filter-option" data-filter="apps" onclick="applyCompareFilter('apps', 'category')">
+                        <span>Appar</span>
+                        <span class="count">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <h4>Språk</h4>
+                <div class="filter-options" id="compareLanguageFilters">
+                    <div class="filter-option active" data-filter="alla" onclick="applyCompareFilter('alla', 'language')">
+                        <span>Alla språk</span>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="filter-option" data-filter="svenska" onclick="applyCompareFilter('svenska', 'language')">
+                        <span>🇸🇪 Svenska</span>
+                        <span class="count">0</span>
+                    </div>
+                    <div class="filter-option" data-filter="engelska" onclick="applyCompareFilter('engelska', 'language')">
+                        <span>🇺🇸 English</span>
+                        <span class="count">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <h4>Smarta filter</h4>
+                <div class="filter-options" id="compareSmartFilterOptions">
+                    <!-- Smart filters will be generated here -->
+                </div>
+            </div>
+            
+            <button class="reset-filters-btn" onclick="resetCompareFilters()">Återställ alla filter</button>
+        </div>
+        
+        <div class="compare-scroll-container">
+            <div class="compare-grid" id="compareGrid">
+                <!-- Cards will be loaded here dynamically -->
+            </div>
+        </div>
+        
+        <div class="scroll-hint">
+            <span>Scrolla för att se fler</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>Detta är en jämförelsesajt skapad av Functional Foods för att hjälpa dig ta rätt beslut när det kommer till din hälsa.</p>
+    </footer>
+    
+    <script src="site-data.js"></script>
+    <script>
+        let currentCompareFilter = 'alla';
+        let currentSmartFilter = null;
+        let currentLanguageFilter = 'alla';
+        let selectedSites = [];
+        
+        // Initialize comparison page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSelectedSitesFromURL();
+            loadComparisonCards();
+        });
+        
+        function loadSelectedSitesFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sitesParam = urlParams.get('sites');
+            
+            if (sitesParam) {
+                selectedSites = sitesParam.split(',');
+                displaySelectedSitesInfo();
+            }
+        }
+        
+        function showAllSites() {
+            // Clear any site selections
+            selectedSites = [];
+            document.getElementById('selectedSitesInfo').style.display = 'none';
+
+            // Reset all filters
+            currentCompareFilter = 'alla';
+            currentSmartFilter = null;
+            
+            // Remove active states in filter panels (if they exist)
+            document.querySelectorAll('#compareCategoryFilters .filter-option').forEach(opt => opt.classList.remove('active'));
+            const allCategoryOpt = document.querySelector('#compareCategoryFilters [data-filter="alla"]');
+            if (allCategoryOpt) allCategoryOpt.classList.add('active');
+
+            document.querySelectorAll('#compareSmartFilterOptions .filter-option').forEach(opt => opt.classList.remove('active'));
+
+            // Update URL to remove any "sites" parameter
+            const url = new URL(window.location);
+            url.searchParams.delete('sites');
+            window.history.replaceState({}, '', url);
+
+            loadComparisonCards();
+        }
+        
+        function displaySelectedSitesInfo() {
+            if (selectedSites.length > 0) {
+                const selectedSiteNames = selectedSites.map(domain => {
+                    const site = siteData.find(s => s.domain === domain);
+                    return site ? site.name : domain;
+                });
+                
+                document.getElementById('selectedSitesInfo').style.display = 'block';
+                document.getElementById('selectedSitesList').textContent = 
+                    `${selectedSiteNames.join(', ')} (${selectedSites.length} sajter)`;
+            }
+        }
+        
+        function toggleCompareFilterPanel() {
+            const panel = document.getElementById('compareFilterPanel');
+            const backdrop = document.querySelector('.filter-backdrop');
+            
+            if (panel.classList.contains('active')) {
+                closeCompareFilterPanel();
+            } else {
+                panel.classList.add('active');
+                backdrop.classList.add('active');
+                updateCompareFilterCounts();
+            }
+        }
+
+        function closeCompareFilterPanel() {
+            document.getElementById('compareFilterPanel').classList.remove('active');
+            document.querySelector('.filter-backdrop').classList.remove('active');
+        }
+
+        function updateCompareFilterCounts() {
+            // Update category counts
+            const categories = {
+                'alla': siteData.length,
+                'recommended': siteData.filter(s => s.is_recommended).length,
+                'coaching': siteData.filter(s => s.categories?.includes('COACHING')).length,
+                'nutrition': siteData.filter(s => s.categories?.some(c => ['HÄLSOKOST', 'KOSTTILLSKOTT'].includes(c))).length,
+                'supplements': siteData.filter(s => s.categories?.includes('KOSTTILLSKOTT')).length,
+                'fitness': siteData.filter(s => s.categories?.some(c => ['TRÄNING', 'APPS'].includes(c))).length,
+                'apps': siteData.filter(s => s.categories?.includes('APPS')).length
+            };
+            
+            Object.keys(categories).forEach(key => {
+                const option = document.querySelector(`#compareCategoryFilters [data-filter="${key}"] .count`);
+                if (option) option.textContent = categories[key];
+            });
+            
+            // Update language counts
+            const languages = {
+                'alla': siteData.length,
+                'svenska': siteData.filter(s => s.language === 'Svenska').length,
+                'engelska': siteData.filter(s => s.language === 'Engelska').length
+            };
+            
+            Object.keys(languages).forEach(key => {
+                const option = document.querySelector(`#compareLanguageFilters [data-filter="${key}"] .count`);
+                if (option) option.textContent = languages[key];
+            });
+            
+            // Update smart filter counts
+            const smartFilterContainer = document.getElementById('compareSmartFilterOptions');
+            if (smartFilterContainer && typeof smartFilters !== 'undefined') {
+                smartFilterContainer.innerHTML = Object.keys(smartFilters).map(filterKey => {
+                    const count = smartFilters[filterKey](siteData).length;
+                    const isActive = currentSmartFilter === filterKey ? 'active' : '';
+                    return `
+                        <div class="filter-option ${isActive}" data-filter="${filterKey}" onclick="applyCompareFilter('${filterKey}', 'smart')">
+                            <span>${filterKey}</span>
+                            <span class="count">${count}</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+        }
+
+        function resetCompareFilters() {
+            currentCompareFilter = 'alla';
+            currentSmartFilter = null;
+            currentLanguageFilter = 'alla';
+            
+            document.querySelectorAll('#compareCategoryFilters .filter-option').forEach(opt => opt.classList.remove('active'));
+            document.querySelector('#compareCategoryFilters [data-filter="alla"]').classList.add('active');
+            
+            document.querySelectorAll('#compareLanguageFilters .filter-option').forEach(opt => opt.classList.remove('active'));
+            document.querySelector('#compareLanguageFilters [data-filter="alla"]').classList.add('active');
+            
+            document.querySelectorAll('#compareSmartFilterOptions .filter-option').forEach(opt => opt.classList.remove('active'));
+            
+            loadComparisonCards();
+            closeCompareFilterPanel();
+        }
+        
+        function loadComparisonCards() {
+            const grid = document.getElementById('compareGrid');
+            let sites = [...siteData];
+            
+            // If we have selected sites from URL, show only those
+            if (selectedSites.length > 0) {
+                sites = sites.filter(site => selectedSites.includes(site.domain));
+            }
+            
+            // Apply category filter
+            if (currentCompareFilter === 'recommended') {
+                sites = sites.filter(site => site.is_recommended);
+            } else if (currentCompareFilter !== 'alla') {
+                const categoryMapping = {
+                    'coaching': ['COACHING'],
+                    'nutrition': ['HÄLSOKOST', 'KOSTTILLSKOTT'],
+                    'supplements': ['KOSTTILLSKOTT'],
+                    'fitness': ['TRÄNING', 'APPS'],
+                    'apps': ['APPS']
+                };
+                
+                const categories = categoryMapping[currentCompareFilter] || [currentCompareFilter.toUpperCase()];
+                sites = sites.filter(site => 
+                    site.categories && site.categories.some(cat => categories.includes(cat))
+                );
+            }
+            
+            // Apply language filter
+            if (currentLanguageFilter === 'svenska') {
+                sites = sites.filter(site => site.language === 'Svenska');
+            } else if (currentLanguageFilter === 'engelska') {
+                sites = sites.filter(site => site.language === 'Engelska');
+            }
+            
+            // Apply smart filter if active
+            if (currentSmartFilter && smartFilters[currentSmartFilter]) {
+                sites = smartFilters[currentSmartFilter](sites);
+            }
+            
+            // Sort with Swedish sites first, then by quality
+            sites.sort((a, b) => {
+                // Swedish sites always come first
+                if (a.language === 'Svenska' && b.language !== 'Svenska') return -1;
+                if (a.language !== 'Svenska' && b.language === 'Svenska') return 1;
+                
+                // Then by recommendation status
+                if (a.is_recommended && !b.is_recommended) return -1;
+                if (!a.is_recommended && b.is_recommended) return 1;
+                
+                // Finally by quality score
+                return b.quality_score - a.quality_score;
+            });
+            
+            if (sites.length === 0) {
+                grid.innerHTML = `
+                    <div class="no-selection">
+                        <h3>Inga sajter hittades</h3>
+                        <p>Prova att ändra filterinställningarna eller gå tillbaka till startsidan för att välja sajter att jämföra.</p>
+                        <a href="index.html" class="visit-btn">Tillbaka till startsidan</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            grid.innerHTML = sites.map(site => createCompareCard(site)).join('');
+        }
+        
+        function createCompareCard(site) {
+            const badges = createCompareBadges(site);
+            const socialIcons = createCompareSocialIcons(site.social_media || {});
+            const qualityMeter = createCompareQualityMeter(site.quality_score || 70);
+            
+            return `
+                <div class="compare-card ${site.is_recommended ? 'recommended' : ''}">
+                    ${site.is_recommended ? '<div class="recommendation-banner">REKOMMENDERAD</div>' : ''}
+                    
+                    <h3>${site.name}</h3>
+                    <p class="compare-domain">${site.domain}</p>
+                    
+                    <div class="compare-rating">
+                        <div class="stars">${createStars(site.rating)}</div>
+                        <span class="rating-number">${site.rating}/5</span>
+                    </div>
+                    
+                    ${badges}
+                    ${qualityMeter}
+                    
+                    <div class="compare-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Hastighet</span>
+                            <span class="stat-value">${formatSpeed(site.response_time)}</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Kurser</span>
+                            <span class="stat-value">${site.courses || 0}</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Språk</span>
+                            <span class="stat-value">${formatLanguages(site.languages)}</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Pris</span>
+                            <span class="stat-value">${site.priceRange || 'Kontakta'}</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">SSL</span>
+                            <span class="stat-value">${site.has_ssl ? '🔒 Ja' : '❌ Nej'}</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Mobil</span>
+                            <span class="stat-value">${site.has_mobile_meta ? '📱 Ja' : '❌ Nej'}</span>
+                        </div>
+                    </div>
+                    
+                    <p class="description">${site.shortDescription || site.description}</p>
+                    ${site.specialties && site.specialties.length > 0 ? `
+                        <div class="specialties">
+                            <h4>Specialiteter</h4>
+                            ${site.specialties.map(spec => 
+                                `<span class="specialty-tag">${spec}</span>`
+                            ).join('')}
+                        </div>
+                    ` : ''}
+                    
+                    ${Object.keys(site.social_media || {}).length > 0 ? `
+                        <div class="social-section">
+                            <h4>Sociala medier</h4>
+                            <div class="compare-social-icons">
+                                ${socialIcons}
+                            </div>
+                        </div>
+                    ` : ''}
+                    
+                    <div class="card-actions">
+                        <a href="https://${site.domain}" target="_blank" class="visit-btn">
+                            <span>BESÖK ${site.name.toUpperCase()}</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function createCompareBadges(site) {
+            if (!site.badges || site.badges.length === 0) return '';
+            
+            return `
+                <div class="compare-badges">
+                    ${site.badges.map(badge => `<span class="badge badge-${badge.toLowerCase()}">${badge}</span>`).join('')}
+                </div>
+            `;
+        }
+        
+        function createCompareQualityMeter(score) {
+            const percentage = Math.min(100, Math.max(0, score));
+            const colorClass = percentage >= 80 ? 'excellent' : percentage >= 60 ? 'good' : 'average';
+            
+            return `
+                <div class="compare-quality-meter">
+                    <div class="quality-label">
+                        <span>Kvalitetspoäng</span>
+                        <strong>${percentage}</strong>
+                    </div>
+                    <div class="quality-bar">
+                        <div class="quality-fill ${colorClass}" style="width: ${percentage}%"></div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function createCompareSocialIcons(socialMedia) {
+            const platforms = Object.keys(socialMedia);
+            if (platforms.length === 0) return '';
+            
+            const iconMap = {
+                facebook: '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>',
+                instagram: '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/></svg>',
+                youtube: '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>',
+                twitter: '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>',
+                linkedin: '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>'
+            };
+            
+            return platforms.map(platform => 
+                `<a href="${socialMedia[platform]}" target="_blank" class="social-icon social-${platform}" title="${platform}">
+                    ${iconMap[platform] || '🌐'}
+                </a>`
+            ).join('');
+        }
+        
+        // Utility functions (copied from script.js)
+        function createStars(rating) {
+            const fullStars = Math.floor(rating);
+            const halfStar = rating % 1 >= 0.5;
+            let stars = '';
+            
+            for (let i = 0; i < fullStars; i++) {
+                stars += '⭐';
+            }
+            if (halfStar) {
+                stars += '⭐';
+            }
+            
+            return stars;
+        }
+        
+        function formatSpeed(responseTime) {
+            if (!responseTime) return 'N/A';
+            if (responseTime < 0.3) return '⚡ Snabb';
+            if (responseTime < 1.0) return '✅ Bra';
+            if (responseTime < 2.0) return '⚠️ Långsam';
+            return '🐌 Mycket långsam';
+        }
+        
+        function formatLanguages(languages) {
+            if (!languages || languages.length === 0) return 'N/A';
+            return languages.includes('svenska') || languages.includes('sv') ? 'Svenska' : 'Engelska';
+        }
+        
+        // Filter functions
+        function applyCompareFilter(filter, type) {
+            if (type === 'category') {
+                // Update active state
+                document.querySelectorAll('#compareCategoryFilters .filter-option').forEach(opt => opt.classList.remove('active'));
+                event.target.closest('.filter-option').classList.add('active');
+                
+                // Clear smart filter
+                document.querySelectorAll('#compareSmartFilterOptions .filter-option').forEach(opt => opt.classList.remove('active'));
+                currentSmartFilter = null;
+                
+                currentCompareFilter = filter;
+            } else if (type === 'language') {
+                // Update active state
+                document.querySelectorAll('#compareLanguageFilters .filter-option').forEach(opt => opt.classList.remove('active'));
+                event.target.closest('.filter-option').classList.add('active');
+                
+                currentLanguageFilter = filter;
+            } else if (type === 'smart') {
+                // Update active state
+                document.querySelectorAll('#compareSmartFilterOptions .filter-option').forEach(opt => opt.classList.remove('active'));
+                
+                if (currentSmartFilter === filter) {
+                    currentSmartFilter = null;
+                } else {
+                    event.target.closest('.filter-option').classList.add('active');
+                    currentSmartFilter = filter;
+                }
+            }
+            
+            loadComparisonCards();
+            closeCompareFilterPanel();
+        }
+    </script>
+</body>
+</html> 
