@@ -98,6 +98,15 @@ function initializePlatformWithData() {
     console.log(`📊 Laddat ${siteData.length} sajter med fullständig data`);
 }
 
+function calculateQualityScore(site) {
+    // Simple quality score calculation
+    let score = 70; // Base score
+    if (site.has_ssl) score += 10;
+    if (site.has_mobile_meta) score += 10;
+    if (site.response_time && site.response_time < 1.0) score += 10;
+    return Math.min(score, 100);
+}
+
 function initializePlatform() {
     // Add quality badges to each site card
     siteData.forEach(site => {
@@ -106,8 +115,8 @@ function initializePlatform() {
         }
     });
     
-    // Initialize personalized recommendations
-    displayPersonalizedSection();
+    // Initialize personalized recommendations (placeholder)
+    // displayPersonalizedSection(); // Commented out until implemented
 }
 
 function displaySites(sites) {
