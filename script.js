@@ -50,19 +50,55 @@ if (!forceDisplayAllSites()) {
 
 // Initialize the platform
 document.addEventListener('DOMContentLoaded', function() {
-    // Wait for siteData to be available
-    if (typeof siteData === 'undefined') {
-        console.log('⏳ Väntar på att siteData ska laddas...');
-        // Check every 100ms for siteData to be available
-        const checkDataInterval = setInterval(function() {
-            if (typeof siteData !== 'undefined' && siteData.length > 0) {
-                clearInterval(checkDataInterval);
-                initializePlatformWithData();
+    // More aggressive data waiting with multiple fallbacks
+    let attempts = 0;
+    const maxAttempts = 50; // 5 seconds max wait
+    
+    function waitForDataAndInitialize() {
+        attempts++;
+        
+        if (typeof siteData !== 'undefined' && siteData.length > 0) {
+            console.log('✅ siteData loaded successfully:', siteData.length, 'sites');
+            initializePlatformWithData();
+            return;
+        }
+        
+        if (attempts >= maxAttempts) {
+            console.error('❌ Failed to load siteData after', attempts, 'attempts');
+            // Show error message to user
+            const container = document.getElementById('sites-container');
+            if (container) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 40px; background: white; border-radius: 12px; margin: 20px;">
+                        <h3 style="color: #e74c3c;">Data kunde inte laddas</h3>
+                        <p>Försök att ladda om sidan eller kontakta support.</p>
+                        <button onclick="location.reload()" style="background: #2d6a4f; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer;">
+                            Ladda om sidan
+                        </button>
+                    </div>
+                `;
             }
-        }, 100);
-    } else {
-        initializePlatformWithData();
+            return;
+        }
+        
+        console.log('⏳ Väntar på siteData... försök', attempts, 'av', maxAttempts);
+        setTimeout(waitForDataAndInitialize, 100);
     }
+    
+    // Start waiting for data
+    waitForDataAndInitialize();
+    
+    // Also try to force initialize after a delay as backup
+    setTimeout(() => {
+        if (typeof siteData !== 'undefined' && siteData.length > 0) {
+            console.log('🔄 Backup initialization triggered');
+            try {
+                initializePlatformWithData();
+            } catch (error) {
+                console.error('Backup initialization failed:', error);
+            }
+        }
+    }, 2000);
 });
 
 function initializePlatformWithData() {
@@ -240,8 +276,6 @@ function createSpecialtyTags(specialties) {
         </div>
     `;
 }
-
-
 
 function setupSmartFilters() {
     const filtersContainer = document.querySelector('.smart-filters');
