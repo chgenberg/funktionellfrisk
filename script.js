@@ -9,6 +9,22 @@ let showPodcasts = false;
 
 // Initialize the platform
 document.addEventListener('DOMContentLoaded', function() {
+    // Wait for siteData to be available
+    if (typeof siteData === 'undefined') {
+        console.log('⏳ Väntar på att siteData ska laddas...');
+        // Check every 100ms for siteData to be available
+        const checkDataInterval = setInterval(function() {
+            if (typeof siteData !== 'undefined' && siteData.length > 0) {
+                clearInterval(checkDataInterval);
+                initializePlatformWithData();
+            }
+        }, 100);
+    } else {
+        initializePlatformWithData();
+    }
+});
+
+function initializePlatformWithData() {
     initializePlatform();
     filteredData = [...siteData]; // Ensure all sites are shown initially
     displaySites(filteredData);
@@ -18,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('🎯 Avancerad hälsoplattform initialiserad');
     console.log(`📊 Laddat ${siteData.length} sajter med fullständig data`);
-});
+}
 
 function initializePlatform() {
     // Add quality badges to each site card
@@ -227,6 +243,9 @@ function setupSmartFilters() {
         </button>
         ${filterButtons}
     `;
+    
+    // Automatically show all sites when filters are set up
+    applySmartFilter('alla');
 }
 
 function applySmartFilter(filterKey) {
