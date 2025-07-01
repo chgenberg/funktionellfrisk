@@ -1278,7 +1278,6 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
-    "social_media": {},
     "rating": 4.75,
     "quality_score": 95,
     "response_time": 1.474853,
@@ -1310,7 +1309,6 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
-    "social_media": {},
     "rating": 4.75,
     "quality_score": 95,
     "response_time": 0.322624,
@@ -1342,7 +1340,6 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
-    "social_media": {},
     "rating": 4.75,
     "quality_score": 95,
     "response_time": 0.060633,
@@ -1374,7 +1371,6 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
-    "social_media": {},
     "rating": 4.75,
     "quality_score": 95,
     "response_time": 0.665824,
@@ -1408,7 +1404,6 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
-    "social_media": {},
     "rating": 4.75,
     "quality_score": 95,
     "response_time": 1.186745,
@@ -1440,7 +1435,6 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
-    "social_media": {},
     "rating": 4.75,
     "quality_score": 95,
     "response_time": 0.594494,
@@ -1569,7 +1563,6 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
-    "social_media": {},
     "rating": 4.25,
     "quality_score": 85,
     "response_time": 0.020702,
@@ -1601,7 +1594,6 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
-    "social_media": {},
     "rating": 4.25,
     "quality_score": 85,
     "response_time": 1.134784,
@@ -2317,7 +2309,6 @@ const siteData = [
     "language": "English",
     "description": "Fitness Revolution är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
-    "social_media": {},
     "is_recommended": false,
     "rating": 4.3,
     "quality_score": 93,
@@ -3348,7 +3339,6 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
-    "social_media": {},
     "rating": 3.75,
     "quality_score": 75,
     "response_time": 0.912195,
@@ -3381,7 +3371,6 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
-    "social_media": {},
     "rating": 3.75,
     "quality_score": 75,
     "response_time": 0.55251,
@@ -3842,7 +3831,6 @@ const siteData = [
     "language": "English",
     "description": "FitTracker Pro är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
-    "social_media": {},
     "is_recommended": false,
     "rating": 4.0,
     "quality_score": 70,
@@ -3864,22 +3852,31 @@ const siteData = [
   }
 ];
 
-// Smart filters definition
-const smartFilters = {
-    'SNABBAST': (sites) => sites.filter(site => site.response_time && site.response_time < 0.5),
-    'BUDGET': (sites) => sites.filter(site => 
-        site.priceRange && (
-            site.priceRange.toLowerCase().includes('gratis') || 
-            site.priceRange.toLowerCase().includes('free') ||
-            site.priceRange.toLowerCase().includes('0') ||
-            (site.priceRange.match(/\d+/) && parseInt(site.priceRange.match(/\d+/)[0]) < 100)
+// Smart filters definition - using window global to avoid duplicate declaration errors
+console.log('🔧 Defining smartFilters object...');
+if (typeof window.smartFilters === 'undefined') {
+    window.smartFilters = {
+        'SNABBAST': (sites) => sites.filter(site => site.response_time && site.response_time < 0.5),
+        'BUDGET': (sites) => sites.filter(site => 
+            site.priceRange && (
+                site.priceRange.toLowerCase().includes('gratis') || 
+                site.priceRange.toLowerCase().includes('free') ||
+                site.priceRange.toLowerCase().includes('0') ||
+                (site.priceRange.match(/\d+/) && parseInt(site.priceRange.match(/\d+/)[0]) < 100)
+            )
+        ),
+        'HÖGKVALITET': (sites) => sites.filter(site => site.quality_score >= 85),
+        'GRATIS': (sites) => sites.filter(site => 
+            site.priceRange && (
+                site.priceRange.toLowerCase().includes('gratis') || 
+                site.priceRange.toLowerCase().includes('free')
+            )
         )
-    ),
-    'HÖGKVALITET': (sites) => sites.filter(site => site.quality_score >= 85),
-    'GRATIS': (sites) => sites.filter(site => 
-        site.priceRange && (
-            site.priceRange.toLowerCase().includes('gratis') || 
-            site.priceRange.toLowerCase().includes('free')
-        )
-    )
-};
+    };
+    console.log('✅ smartFilters defined successfully:', Object.keys(window.smartFilters));
+} else {
+    console.log('⚠️ smartFilters already exists, skipping redefinition');
+}
+
+// Make it available as smartFilters for backward compatibility
+var smartFilters = window.smartFilters;

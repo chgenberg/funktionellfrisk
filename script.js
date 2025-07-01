@@ -288,10 +288,18 @@ function setupSmartFilters() {
         return;
     }
     
+    // Use window.smartFilters to avoid duplicate declaration issues
+    const filters = window.smartFilters || (typeof smartFilters !== 'undefined' ? smartFilters : {});
+    if (!filters || Object.keys(filters).length === 0) {
+        console.warn('⚠️ smartFilters not available, retrying...');
+        setTimeout(setupSmartFilters, 100);
+        return;
+    }
+    
     console.log('Setting up smart filters with', siteData.length, 'sites');
     
-    const filterButtons = Object.keys(smartFilters).map(filterKey => {
-        const count = smartFilters[filterKey](siteData).length;
+    const filterButtons = Object.keys(filters).map(filterKey => {
+        const count = filters[filterKey](siteData).length;
         return `
             <button class="smart-filter-btn" data-filter="${filterKey}" onclick="applySmartFilter('${filterKey}')">
                 ${filterKey} (${count})
@@ -315,10 +323,12 @@ function applySmartFilter(filterKey) {
     document.querySelectorAll('.smart-filter-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelector(`[data-filter="${filterKey}"]`).classList.add('active');
     
+    const filters = window.smartFilters || (typeof smartFilters !== 'undefined' ? smartFilters : {});
+    
     if (filterKey === 'alla') {
         filteredData = [...siteData];
     } else {
-        filteredData = smartFilters[filterKey](siteData);
+        filteredData = filters[filterKey] ? filters[filterKey](siteData) : [...siteData];
     }
     
     currentFilter = filterKey;
@@ -850,9 +860,10 @@ function updateFilterCounts() {
     
     // Update smart filter counts
     const smartFilterContainer = document.getElementById('smartFilterOptions');
-    if (smartFilterContainer) {
-        smartFilterContainer.innerHTML = Object.keys(smartFilters).map(filterKey => {
-            const count = smartFilters[filterKey](siteData).length;
+    const filters = window.smartFilters || (typeof smartFilters !== 'undefined' ? smartFilters : {});
+    if (smartFilterContainer && filters && Object.keys(filters).length > 0) {
+        smartFilterContainer.innerHTML = Object.keys(filters).map(filterKey => {
+            const count = filters[filterKey](siteData).length;
             const isActive = currentSmartFilter === filterKey ? 'active' : '';
             return `
                 <div class="filter-option ${isActive}" data-filter="${filterKey}" onclick="applyFilter('${filterKey}', 'smart')">
@@ -928,8 +939,9 @@ function applyLanguageFilter() {
     }
     
     // Apply smart filter if active
-    if (currentSmartFilter && smartFilters[currentSmartFilter]) {
-        filtered = smartFilters[currentSmartFilter](filtered);
+    const filters = window.smartFilters || (typeof smartFilters !== 'undefined' ? smartFilters : {});
+    if (currentSmartFilter && filters[currentSmartFilter]) {
+        filtered = filters[currentSmartFilter](filtered);
     }
     
     // Sort with Swedish sites first
