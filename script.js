@@ -474,9 +474,14 @@ function setupPersonalizationEngine() {
         const preferences = JSON.parse(userPrefs);
         displayPersonalizedRecommendations(preferences);
     } else {
-        // Show preference selection modal
-        showPreferenceModal();
+        // Show preference selection modal - disabled for now
+        // showPreferenceModal();
     }
+}
+
+function getPersonalizedRecommendations(preferences = {}) {
+    // Simple recommendation logic - return top 3 sites
+    return siteData.slice(0, 3);
 }
 
 function displayPersonalizedRecommendations(preferences = {}) {
