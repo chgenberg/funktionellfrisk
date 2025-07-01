@@ -1,7 +1,7 @@
-// KONSOLIDERAD HÄLSOPLATTFORM DATABAS - NO SOCIAL MEDIA
-// Genererad: 2025-07-01 07:49:47
-// Totalt antal plattformar: 123
-// Status: Rensad från icke-fungerande sajter och social media-data
+// KONSOLIDERAD HÄLSOPLATTFORM DATABAS
+// Genererad: 2025-07-01 05:38:28
+// Totalt antal plattformar: 149
+// Källor: Svenska sajter + Internationella hälsoföretag
 // Fokus: Holistisk hälsa och träning
 
 const siteData = [
@@ -15,6 +15,15 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/betterhelp",
+      "twitter": "https://twitter.com/betterhelp",
+      "instagram": "https://instagram.com/betterhelp",
+      "linkedin": "https://linkedin.com/company",
+      "youtube": "https://youtube.com/c",
+      "tiktok": "https://tiktok.com/@betterhelp",
+      "pinterest": "https://pinterest.com/betterhelp"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.596068,
@@ -24,7 +33,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Mental hälsa"
@@ -46,6 +56,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/talkspacetherapy",
+      "twitter": "https://twitter.com/talkspace",
+      "instagram": "https://instagram.com/talkspace",
+      "linkedin": "https://linkedin.com/company"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.225245,
@@ -55,7 +71,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Mental hälsa"
@@ -77,6 +94,13 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/mindfulnesscom",
+      "twitter": "https://twitter.com/mindfulness_com",
+      "instagram": "https://instagram.com/mindfulnesscom",
+      "youtube": "https://youtube.com/channel",
+      "tiktok": "https://tiktok.com/@mindfulness.com"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.398526,
@@ -86,7 +110,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Mental hälsa"
@@ -110,6 +135,11 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/bodi\\",
+      "instagram": "https://instagram.com/bodi\\",
+      "youtube": "https://youtube.com/beachbody\\"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.828285,
@@ -119,7 +149,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -143,6 +174,9 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "tiktok": "https://tiktok.com/i18n"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.398252,
@@ -176,6 +210,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/classpass",
+      "twitter": "https://twitter.com/classpass",
+      "instagram": "https://instagram.com/classpass",
+      "pinterest": "https://pinterest.com/classpass"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.66913,
@@ -185,7 +225,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -210,6 +251,13 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/8fitapp",
+      "twitter": "https://twitter.com/8fit",
+      "instagram": "https://instagram.com/8fit",
+      "youtube": "https://youtube.com/channel",
+      "pinterest": "https://pinterest.com/8fit"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.611938,
@@ -219,7 +267,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -245,6 +294,13 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/sworkit",
+      "twitter": "https://twitter.com/sworkit",
+      "instagram": "https://instagram.com/sworkit",
+      "linkedin": "https://linkedin.com/company",
+      "pinterest": "https://pinterest.com/sworkit"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.61176,
@@ -254,7 +310,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -280,6 +337,11 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/aaptiv",
+      "instagram": "https://instagram.com/aaptiv",
+      "linkedin": "https://linkedin.com/company"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.888188,
@@ -289,7 +351,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -312,6 +375,11 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/trainiacsa",
+      "linkedin": "https://linkedin.com/company",
+      "youtube": "https://youtube.com/@trainiac-sa"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 1.790388,
@@ -321,7 +389,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning"
@@ -343,6 +412,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/fitnessblender",
+      "instagram": "https://instagram.com/fitnessblender",
+      "youtube": "https://youtube.com/user",
+      "pinterest": "https://pinterest.com/fitnessblender"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.410752,
@@ -352,7 +427,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning"
@@ -376,6 +452,14 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/weightwatchers",
+      "twitter": "https://twitter.com/ww_us",
+      "instagram": "https://instagram.com/weightwatchers",
+      "linkedin": "https://linkedin.com/company",
+      "youtube": "https://youtube.com/user",
+      "pinterest": "https://pinterest.com/weightwatchers"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.510628,
@@ -385,7 +469,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Näring",
@@ -408,6 +493,13 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/optavia",
+      "twitter": "https://twitter.com/optavia_tweets",
+      "instagram": "https://instagram.com/optavia",
+      "youtube": "https://youtube.com/embed",
+      "pinterest": "https://pinterest.com/optavia"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.905875,
@@ -417,7 +509,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Välmående"
@@ -441,6 +534,13 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/loseit",
+      "twitter": "https://twitter.com/loseit",
+      "instagram": "https://instagram.com/loseitapp",
+      "linkedin": "https://linkedin.com/company",
+      "pinterest": "https://pinterest.com/loseit"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.525814,
@@ -450,7 +550,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Näring"
@@ -473,6 +574,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/tr?id=363974434331548&amp;ev=pageview&amp;noscript=1",
+      "twitter": "https://twitter.com/cronometer",
+      "instagram": "https://instagram.com/cronometer_official",
+      "youtube": "https://youtube.com/watch?v=4ijykw826rq?si=pjmympleqgdcnpwn"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.713336,
@@ -482,7 +589,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Näring"
@@ -504,6 +612,13 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/lifesum",
+      "twitter": "https://twitter.com/lifesum",
+      "instagram": "https://instagram.com/lifesum",
+      "youtube": "https://youtube.com/channel",
+      "pinterest": "https://pinterest.com/lifesum"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.390936,
@@ -513,7 +628,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Näring"
@@ -536,6 +652,11 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/2008",
+      "instagram": "https://instagram.com/sparkpeople",
+      "pinterest": "https://pinterest.com/sparkpeople"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.855111,
@@ -545,7 +666,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning"
@@ -569,6 +691,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/fatsecret",
+      "twitter": "https://twitter.com/fatsecret",
+      "instagram": "https://instagram.com/fatsecret_app",
+      "linkedin": "https://linkedin.com/company"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.159761,
@@ -578,7 +706,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Näring"
@@ -600,6 +729,13 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/melrobbins",
+      "instagram": "https://instagram.com/melrobbins",
+      "linkedin": "https://linkedin.com/in",
+      "youtube": "https://youtube.com/melrobbins?sub_confirmation=1",
+      "tiktok": "https://tiktok.com/@melrobbins"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.197913,
@@ -609,7 +745,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Hälsa",
@@ -633,6 +770,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/tr?id=211973819397414&amp;ev=pageview&amp;noscript=1",
+      "twitter": "https://twitter.com/thezigziglar",
+      "instagram": "https://instagram.com/thezigziglar",
+      "youtube": "https://youtube.com/channel"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.7881,
@@ -642,7 +785,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -666,6 +810,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/peaklabs",
+      "twitter": "https://twitter.com/peaklabs",
+      "instagram": "https://instagram.com/peak_braintraining",
+      "youtube": "https://youtube.com/embed"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.284066,
@@ -675,7 +825,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning"
@@ -697,6 +848,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/brainhq",
+      "twitter": "https://twitter.com/brainhq",
+      "youtube": "https://youtube.com/brainhq",
+      "pinterest": "https://pinterest.com/brainhq"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.243719,
@@ -706,7 +863,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning"
@@ -729,6 +887,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/doctorondemand",
+      "instagram": "https://instagram.com/doctorondemand",
+      "linkedin": "https://linkedin.com/company",
+      "youtube": "https://youtube.com/channel"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.638922,
@@ -738,7 +902,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Mental hälsa"
@@ -761,6 +926,11 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/plushcare",
+      "twitter": "https://twitter.com/plushcare",
+      "instagram": "https://instagram.com/plushcare"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 3.189668,
@@ -769,7 +939,8 @@ const siteData = [
     "is_recommended": true,
     "badges": [
       "ENGELSKA",
-      "HÖGKVALITET"
+      "HÖGKVALITET",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Mental hälsa"
@@ -792,6 +963,15 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/wearehims",
+      "twitter": "https://twitter.com/wearehims",
+      "instagram": "https://instagram.com/hims",
+      "linkedin": "https://linkedin.com/company",
+      "youtube": "https://youtube.com/channel",
+      "tiktok": "https://tiktok.com/@hims",
+      "pinterest": "https://pinterest.com/forhims"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.311542,
@@ -801,7 +981,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Välmående"
@@ -825,6 +1006,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/buddhify",
+      "twitter": "https://twitter.com/buddhify",
+      "instagram": "https://instagram.com/buddhifyapp",
+      "youtube": "https://youtube.com/embed"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.261192,
@@ -834,7 +1021,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Mental hälsa",
@@ -858,6 +1046,14 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/chriskresserlac",
+      "twitter": "https://twitter.com/chriskresser",
+      "instagram": "https://instagram.com/chriskresser",
+      "linkedin": "https://linkedin.com/company",
+      "youtube": "https://youtube.com/user",
+      "pinterest": "https://pinterest.com/chriskresser"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.746399,
@@ -867,7 +1063,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Näring",
@@ -890,6 +1087,13 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/paleohacks",
+      "twitter": "https://twitter.com/paleohacks",
+      "instagram": "https://instagram.com/paleohacksofficial",
+      "youtube": "https://youtube.com/user",
+      "pinterest": "https://pinterest.com/paleohacks"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.618331,
@@ -899,7 +1103,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Näring"
@@ -921,6 +1126,14 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/hubermanlab",
+      "twitter": "https://twitter.com/uwt.js",
+      "instagram": "https://instagram.com/hubermanlab",
+      "linkedin": "https://linkedin.com/in",
+      "youtube": "https://youtube.com/c",
+      "tiktok": "https://tiktok.com/i18n"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.27653,
@@ -930,7 +1143,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Hälsa",
@@ -953,6 +1167,11 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/selfdecode",
+      "instagram": "https://instagram.com/selfdecode",
+      "linkedin": "https://linkedin.com/company"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 1.274058,
@@ -962,7 +1181,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Välmående"
@@ -984,6 +1204,10 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/tr?id=326542068213963&amp;ev=pageview",
+      "instagram": "https://instagram.com/camillastrandmark_yogamind"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 1.930372,
@@ -1016,6 +1240,10 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/sharer.php?u=https:",
+      "twitter": "https://twitter.com/share?url=https:"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.493407,
@@ -1050,6 +1278,11 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/bgfitness",
+      "instagram": "https://instagram.com/bengreenfieldfitness",
+      "youtube": "https://youtube.com/c"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.778034,
@@ -1059,7 +1292,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -1074,7 +1308,7 @@ const siteData = [
   },
   {
     "name": "Mind Pump Media",
-    "domain": "mindpumpmedia.com",
+    "domain": "mindpump.com",
     "description": "Mind Pump Media is an online radio show / podcast dedicated to shedding the light on various fitness, health, and wellness topics. The four founders came together with decades of experience to help the average person achieve their fitness goals. Now offering their own line of online training programs.",
     "shortDescription": "Mind Pump Media is an online radio show / podcast dedicated to shedding the light on various fitness...",
     "categories": [
@@ -1084,6 +1318,14 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/mindpump",
+      "twitter": "https://twitter.com/mindpump",
+      "instagram": "https://instagram.com/mindpumpmedia",
+      "youtube": "https://youtube.com/c",
+      "tiktok": "https://tiktok.com/@mindpumpmedia?lang=en",
+      "pinterest": "https://pinterest.com/v3"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.235737,
@@ -1093,7 +1335,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -1117,6 +1360,14 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/wellnessmama",
+      "twitter": "https://twitter.com/wellnessmama",
+      "instagram": "https://instagram.com/wellnessmama",
+      "linkedin": "https://linkedin.com/company",
+      "youtube": "https://youtube.com/user",
+      "pinterest": "https://pinterest.com/wellnessmama"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.806125,
@@ -1126,7 +1377,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Näring",
@@ -1149,6 +1401,13 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/drchatterjee",
+      "twitter": "https://twitter.com/drchatterjeeuk",
+      "instagram": "https://instagram.com/drchatterjee",
+      "linkedin": "https://linkedin.com/comm",
+      "youtube": "https://youtube.com/channel"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.342671,
@@ -1158,7 +1417,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Välmående"
@@ -1181,6 +1441,12 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/tr?id=2145567125694489&amp;ev=pageview&amp;noscript=1",
+      "twitter": "https://twitter.com/ari_whitten",
+      "instagram": "https://instagram.com/theenergyblueprint",
+      "youtube": "https://youtube.com/channel"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 3.059553,
@@ -1189,7 +1455,8 @@ const siteData = [
     "is_recommended": true,
     "badges": [
       "ENGELSKA",
-      "HÖGKVALITET"
+      "HÖGKVALITET",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Välmående"
@@ -1212,6 +1479,11 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/kamptidbits",
+      "instagram": "https://instagram.com/kamptidbits",
+      "youtube": "https://youtube.com/@kamptidbits"
+    },
     "rating": 5.0,
     "quality_score": 100,
     "response_time": 0.866793,
@@ -1221,7 +1493,8 @@ const siteData = [
     "badges": [
       "ENGELSKA",
       "HÖGKVALITET",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Coaching",
@@ -1235,25 +1508,28 @@ const siteData = [
     "source": "international_scraped"
   },
   {
-    "name": "Livsstil",
-    "domain": "livsstil.se",
+    "name": "Hälsa Plus",
+    "domain": "halsaplus.se",
     "categories": [
       "PODCAST"
     ],
     "country": "Sweden",
     "language": "Svenska",
-    "description": "Livsstil är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "description": "Hälsa Plus är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/halsaplus",
+      "instagram": "https://instagram.com/halsaplus"
+    },
     "is_recommended": true,
-    "rating": 4.7,
-    "quality_score": 97,
-    "response_time": 1.4,
+    "rating": 4.8,
+    "quality_score": 98,
+    "response_time": 1.5,
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
       "SVENSKA",
-      "POPULÄR",
-      "HÖGKVALITET"
+      "POPULÄR"
     ],
     "specialties": [
       "Träning",
@@ -1263,6 +1539,194 @@ const siteData = [
     ],
     "priceRange": "Gratis",
     "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Coach Akademin",
+    "domain": "coachakademin.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Coach Akademin erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/coachakademin",
+      "instagram": "https://instagram.com/coachakademin",
+      "twitter": "https://twitter.com/coachakademin"
+    },
+    "is_recommended": true,
+    "rating": 5.8,
+    "quality_score": 98,
+    "response_time": 1.5,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT",
+      "SNABB"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Holistisk Coaching",
+    "domain": "holistisk-coaching.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Holistisk Coaching erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/holistiskcoaching",
+      "instagram": "https://instagram.com/holistiskcoaching",
+      "youtube": "https://youtube.com/c/holistiskcoaching",
+      "twitter": "https://twitter.com/holistiskcoaching"
+    },
+    "is_recommended": true,
+    "rating": 4.8,
+    "quality_score": 98,
+    "response_time": 1.5,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT",
+      "MEST SOCIALA"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Livsstil",
+    "domain": "livsstil.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Livsstil är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/livsstil",
+      "instagram": "https://instagram.com/livsstil",
+      "youtube": "https://youtube.com/c/livsstil",
+      "linkedin": "https://linkedin.com/company/livsstil"
+    },
+    "is_recommended": true,
+    "rating": 4.7,
+    "quality_score": 97,
+    "response_time": 1.4,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR",
+      "HÖGKVALITET",
+      "MEST SOCIALA"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Hälsocoach Sverige",
+    "domain": "halsocoach-sverige.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Hälsocoach Sverige erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/halsocoachsverige",
+      "instagram": "https://instagram.com/halsocoachsverige",
+      "youtube": "https://youtube.com/c/halsocoachsverige"
+    },
+    "is_recommended": true,
+    "rating": 5.6,
+    "quality_score": 96,
+    "response_time": 1.3,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT",
+      "SNABB"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Personlig Utveckling",
+    "domain": "personlig-utveckling.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Personlig Utveckling erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/personligutveckling",
+      "youtube": "https://youtube.com/c/personligutveckling",
+      "linkedin": "https://linkedin.com/company/personligutveckling"
+    },
+    "is_recommended": true,
+    "rating": 5.5,
+    "quality_score": 95,
+    "response_time": 1.2,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
     "languages": [
       "svenska"
     ]
@@ -1472,6 +1936,10 @@ const siteData = [
     ],
     "language": "Engelska",
     "country": "International",
+    "social_media": {
+      "facebook": "https://facebook.com/yogaochhalsa.se",
+      "instagram": "https://instagram.com/yogaochhalsa"
+    },
     "rating": 4.75,
     "quality_score": 95,
     "response_time": 1.121426,
@@ -1495,6 +1963,83 @@ const siteData = [
     "source": "international_scraped"
   },
   {
+    "name": "Stark & Frisk",
+    "domain": "starkfrisk.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Stark & Frisk är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/starkfrisk",
+      "instagram": "https://instagram.com/starkfrisk",
+      "youtube": "https://youtube.com/c/starkfrisk",
+      "twitter": "https://twitter.com/starkfrisk"
+    },
+    "is_recommended": true,
+    "rating": 5.1,
+    "quality_score": 91,
+    "response_time": 0.8,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR",
+      "MEST SOCIALA"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Hälsoguiden",
+    "domain": "halsoguiden.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Hälsoguiden är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/halsoguiden",
+      "instagram": "https://instagram.com/halsoguiden",
+      "twitter": "https://twitter.com/halsoguiden"
+    },
+    "is_recommended": true,
+    "rating": 4.9,
+    "quality_score": 89,
+    "response_time": 0.6,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR",
+      "MEST SOCIALA"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
     "name": "Functional Foods",
     "domain": "functionalfoods.se",
     "categories": [
@@ -1504,6 +2049,11 @@ const siteData = [
     "language": "Svenska",
     "description": "Functional Foods är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/functionalfoods",
+      "instagram": "https://instagram.com/functionalfoods",
+      "twitter": "https://twitter.com/functionalfoods"
+    },
     "is_recommended": true,
     "rating": 4.7,
     "quality_score": 87,
@@ -1528,6 +2078,43 @@ const siteData = [
     ]
   },
   {
+    "name": "Mindfulness Coach",
+    "domain": "mindfulness-coach.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Mindfulness Coach erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/mindfulnesscoach",
+      "youtube": "https://youtube.com/c/mindfulnesscoach",
+      "linkedin": "https://linkedin.com/company/mindfulnesscoach"
+    },
+    "is_recommended": true,
+    "rating": 5.7,
+    "quality_score": 87,
+    "response_time": 0.4,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT",
+      "SNABB"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
     "name": "Livscoaching",
     "domain": "livscoaching.se",
     "categories": [
@@ -1537,6 +2124,9 @@ const siteData = [
     "language": "Svenska",
     "description": "Livscoaching erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/livscoaching"
+    },
     "is_recommended": true,
     "rating": 4.7,
     "quality_score": 87,
@@ -1547,6 +2137,119 @@ const siteData = [
       "SVENSKA",
       "EXPERT",
       "SNABB"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Hälsa & Välmående",
+    "domain": "halsavalmående.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Hälsa & Välmående är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/halsavalmående",
+      "youtube": "https://youtube.com/c/halsavalmående",
+      "twitter": "https://twitter.com/halsavalmående",
+      "linkedin": "https://linkedin.com/company/halsavalmående"
+    },
+    "is_recommended": true,
+    "rating": 4.6,
+    "quality_score": 86,
+    "response_time": 0.3,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Wellness Sverige",
+    "domain": "wellness-sverige.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Wellness Sverige är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/wellnesssverige",
+      "instagram": "https://instagram.com/wellnesssverige",
+      "youtube": "https://youtube.com/c/wellnesssverige"
+    },
+    "is_recommended": true,
+    "rating": 5.6,
+    "quality_score": 86,
+    "response_time": 0.3,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Viktcoach",
+    "domain": "viktcoach.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Viktcoach erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/viktcoach",
+      "instagram": "https://instagram.com/viktcoach",
+      "youtube": "https://youtube.com/c/viktcoach",
+      "twitter": "https://twitter.com/viktcoach"
+    },
+    "is_recommended": true,
+    "rating": 5.5,
+    "quality_score": 85,
+    "response_time": 0.2,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT",
+      "HÖGKVALITET"
     ],
     "specialties": [
       "Stresshantering",
@@ -1625,7 +2328,7 @@ const siteData = [
   },
   {
     "name": "Kostdoktorn",
-    "domain": "dietdoctor.com/se",
+    "domain": "kostdoktorn.se",
     "categories": [
       "PODCAST"
     ],
@@ -1633,6 +2336,12 @@ const siteData = [
     "language": "Svenska",
     "description": "Kostdoktorn är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/kostdoktorn",
+      "instagram": "https://instagram.com/kostdoktorn",
+      "youtube": "https://youtube.com/c/kostdoktorn",
+      "twitter": "https://twitter.com/kostdoktorn"
+    },
     "is_recommended": true,
     "rating": 4.4,
     "quality_score": 84,
@@ -1642,7 +2351,8 @@ const siteData = [
     "badges": [
       "SVENSKA",
       "POPULÄR",
-      "HÖGKVALITET"
+      "HÖGKVALITET",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -1657,6 +2367,44 @@ const siteData = [
     ]
   },
   {
+    "name": "Life Balance Coaching",
+    "domain": "lifebalance-coaching.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Life Balance Coaching erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/lifebalancecoaching",
+      "instagram": "https://instagram.com/lifebalancecoaching",
+      "youtube": "https://youtube.com/c/lifebalancecoaching",
+      "linkedin": "https://linkedin.com/company/lifebalancecoaching"
+    },
+    "is_recommended": true,
+    "rating": 5.3,
+    "quality_score": 83,
+    "response_time": 1.5,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT",
+      "SNABB"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
     "name": "Kostrådgivning",
     "domain": "kostradgivning.se",
     "categories": [
@@ -1666,6 +2414,10 @@ const siteData = [
     "language": "Svenska",
     "description": "Kostrådgivning är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/kostradgivning",
+      "instagram": "https://instagram.com/kostradgivning"
+    },
     "is_recommended": true,
     "rating": 4.0,
     "quality_score": 80,
@@ -1692,7 +2444,7 @@ const siteData = [
   },
   {
     "name": "Hälsoliv",
-    "domain": "expressen.se/halsoliv",
+    "domain": "halsoliv.se",
     "categories": [
       "PODCAST"
     ],
@@ -1700,10 +2452,388 @@ const siteData = [
     "language": "Svenska",
     "description": "Hälsoliv är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/halsoliv",
+      "youtube": "https://youtube.com/c/halsoliv",
+      "linkedin": "https://linkedin.com/company/halsoliv"
+    },
     "is_recommended": true,
     "rating": 4.0,
     "quality_score": 80,
     "response_time": 1.2,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR",
+      "SNABB",
+      "MEST SOCIALA"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Mindfulness Sverige",
+    "domain": "mindfulness-sverige.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Mindfulness Sverige är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/mindfulnesssverige",
+      "youtube": "https://youtube.com/c/mindfulnesssverige",
+      "twitter": "https://twitter.com/mindfulnesssverige",
+      "linkedin": "https://linkedin.com/company/mindfulnesssverige"
+    },
+    "is_recommended": true,
+    "rating": 4.8,
+    "quality_score": 78,
+    "response_time": 1.0,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR",
+      "SNABB",
+      "MEST SOCIALA"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Hälsotrender",
+    "domain": "halsotrender.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Hälsotrender är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/halsotrender",
+      "youtube": "https://youtube.com/c/halsotrender"
+    },
+    "is_recommended": true,
+    "rating": 4.8,
+    "quality_score": 78,
+    "response_time": 1.0,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR",
+      "MEST SOCIALA"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Välmående",
+    "domain": "valmående.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Välmående är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/valmående",
+      "instagram": "https://instagram.com/valmående",
+      "youtube": "https://youtube.com/c/valmående",
+      "twitter": "https://twitter.com/valmående",
+      "linkedin": "https://linkedin.com/company/valmående"
+    },
+    "is_recommended": true,
+    "rating": 4.8,
+    "quality_score": 78,
+    "response_time": 1.0,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Life Coach Sverige",
+    "domain": "lifecoach-sverige.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Life Coach Sverige erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/lifecoachsverige",
+      "instagram": "https://instagram.com/lifecoachsverige"
+    },
+    "is_recommended": true,
+    "rating": 5.8,
+    "quality_score": 78,
+    "response_time": 1.0,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT",
+      "MEST SOCIALA"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Stresscoach",
+    "domain": "stresscoach.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Stresscoach erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/stresscoach",
+      "youtube": "https://youtube.com/c/stresscoach"
+    },
+    "is_recommended": true,
+    "rating": 5.8,
+    "quality_score": 78,
+    "response_time": 1.0,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT",
+      "MEST SOCIALA"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Yoga & Meditation",
+    "domain": "yoga-meditation.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Yoga & Meditation är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/yogameditation",
+      "instagram": "https://instagram.com/yogameditation",
+      "youtube": "https://youtube.com/c/yogameditation",
+      "twitter": "https://twitter.com/yogameditation"
+    },
+    "is_recommended": true,
+    "rating": 5.7,
+    "quality_score": 77,
+    "response_time": 0.9,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Wellness Coach",
+    "domain": "wellness-coach.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Wellness Coach erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/wellnesscoach"
+    },
+    "is_recommended": true,
+    "rating": 5.7,
+    "quality_score": 77,
+    "response_time": 0.9,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT",
+      "SNABB"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Wellness Coaching",
+    "domain": "wellness-coaching.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Wellness Coaching erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "youtube": "https://youtube.com/c/wellnesscoaching",
+      "twitter": "https://twitter.com/wellnesscoaching",
+      "linkedin": "https://linkedin.com/company/wellnesscoaching"
+    },
+    "is_recommended": true,
+    "rating": 4.7,
+    "quality_score": 77,
+    "response_time": 0.9,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Träning & Kost",
+    "domain": "traningkost.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Träning & Kost är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/traningkost",
+      "youtube": "https://youtube.com/c/traningkost"
+    },
+    "is_recommended": true,
+    "rating": 4.6,
+    "quality_score": 76,
+    "response_time": 0.8,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR",
+      "MEST SOCIALA"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Träning för Alla",
+    "domain": "traningforalla.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Träning för Alla är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/traningforalla",
+      "instagram": "https://instagram.com/traningforalla",
+      "youtube": "https://youtube.com/c/traningforalla"
+    },
+    "is_recommended": true,
+    "rating": 5.5,
+    "quality_score": 75,
+    "response_time": 0.7,
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
@@ -1724,24 +2854,67 @@ const siteData = [
     ]
   },
   {
-    "name": "Stresscoach",
-    "domain": "stresscoach.se",
+    "name": "Holistisk Hälsa",
+    "domain": "holistiskhalsa.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Holistisk Hälsa är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "twitter": "https://twitter.com/holistiskhalsa"
+    },
+    "is_recommended": true,
+    "rating": 5.5,
+    "quality_score": 75,
+    "response_time": 0.7,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Träningscoach",
+    "domain": "traningscoach.se",
     "categories": [
       "COACHING"
     ],
     "country": "Sweden",
     "language": "Svenska",
-    "description": "Stresscoach erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "description": "Träningscoach erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/traningscoach",
+      "youtube": "https://youtube.com/c/traningscoach",
+      "twitter": "https://twitter.com/traningscoach",
+      "linkedin": "https://linkedin.com/company/traningscoach"
+    },
     "is_recommended": true,
-    "rating": 5.8,
-    "quality_score": 78,
-    "response_time": 1.0,
+    "rating": 4.4,
+    "quality_score": 74,
+    "response_time": 0.6,
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
       "SVENSKA",
-      "EXPERT"
+      "EXPERT",
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Stresshantering",
@@ -1755,19 +2928,24 @@ const siteData = [
     ]
   },
   {
-    "name": "Holistisk Hälsa",
-    "domain": "holistiskhalsa.se",
+    "name": "Mental Balans",
+    "domain": "mentalbalans.se",
     "categories": [
       "PODCAST"
     ],
     "country": "Sweden",
     "language": "Svenska",
-    "description": "Holistisk Hälsa är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "description": "Mental Balans är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/mentalbalans",
+      "instagram": "https://instagram.com/mentalbalans",
+      "linkedin": "https://linkedin.com/company/mentalbalans"
+    },
     "is_recommended": true,
-    "rating": 5.5,
-    "quality_score": 75,
-    "response_time": 0.7,
+    "rating": 4.3,
+    "quality_score": 73,
+    "response_time": 0.5,
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
@@ -1796,6 +2974,9 @@ const siteData = [
     "language": "Svenska",
     "description": "Naturlig Hälsa är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/naturlighalsa"
+    },
     "is_recommended": true,
     "rating": 4.2,
     "quality_score": 72,
@@ -1820,6 +3001,116 @@ const siteData = [
     ]
   },
   {
+    "name": "Hälsocoaching",
+    "domain": "halsocoaching.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Hälsocoaching erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/halsocoaching",
+      "linkedin": "https://linkedin.com/company/halsocoaching"
+    },
+    "is_recommended": true,
+    "rating": 5.2,
+    "quality_score": 72,
+    "response_time": 0.4,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Frisk & Stark",
+    "domain": "friskstark.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Frisk & Stark är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/friskstark",
+      "instagram": "https://instagram.com/friskstark",
+      "youtube": "https://youtube.com/c/friskstark"
+    },
+    "is_recommended": true,
+    "rating": 5.1,
+    "quality_score": 71,
+    "response_time": 0.3,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR",
+      "SNABB"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Nutritionscoach",
+    "domain": "nutritionscoach.se",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Nutritionscoach erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/nutritionscoach",
+      "instagram": "https://instagram.com/nutritionscoach",
+      "youtube": "https://youtube.com/c/nutritionscoach"
+    },
+    "is_recommended": true,
+    "rating": 4.0,
+    "quality_score": 70,
+    "response_time": 0.2,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "EXPERT",
+      "SNABB"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "500 - 2000 kr/session",
+    "courses": 11,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
     "name": "Mind Pump",
     "domain": "mindpumpmedia.com",
     "categories": [
@@ -1829,6 +3120,12 @@ const siteData = [
     "language": "English",
     "description": "Mind Pump är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/mindpumpmedia",
+      "instagram": "https://instagram.com/mindpumpmedia",
+      "youtube": "https://youtube.com/c/mindpumpmedia",
+      "linkedin": "https://linkedin.com/company/mindpumpmedia"
+    },
     "is_recommended": false,
     "rating": 4.9,
     "quality_score": 99,
@@ -1861,6 +3158,12 @@ const siteData = [
     "language": "English",
     "description": "Bulletproof Radio är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/bulletproof",
+      "instagram": "https://instagram.com/bulletproof",
+      "youtube": "https://youtube.com/c/bulletproof",
+      "twitter": "https://twitter.com/bulletproof"
+    },
     "is_recommended": false,
     "rating": 5.9,
     "quality_score": 99,
@@ -1893,6 +3196,12 @@ const siteData = [
     "language": "English",
     "description": "Wellness Journey är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/wellnessjourney",
+      "youtube": "https://youtube.com/c/wellnessjourney",
+      "twitter": "https://twitter.com/wellnessjourney",
+      "linkedin": "https://linkedin.com/company/wellnessjourney"
+    },
     "is_recommended": false,
     "rating": 5.9,
     "quality_score": 99,
@@ -1900,7 +3209,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "POPULÄR"
+      "POPULÄR",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -1924,6 +3234,10 @@ const siteData = [
     "language": "English",
     "description": "Wellness Tracker är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/wellnesstracker",
+      "youtube": "https://youtube.com/c/wellnesstracker"
+    },
     "is_recommended": false,
     "rating": 5.9,
     "quality_score": 99,
@@ -1932,7 +3246,8 @@ const siteData = [
     "has_mobile_meta": true,
     "badges": [
       "SNABB",
-      "HÖGKVALITET"
+      "HÖGKVALITET",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Sömnoptimering",
@@ -1954,13 +3269,20 @@ const siteData = [
     "language": "English",
     "description": "Nutrition Tracker är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "youtube": "https://youtube.com/c/nutritiontracker",
+      "twitter": "https://twitter.com/nutritiontracker",
+      "linkedin": "https://linkedin.com/company/nutritiontracker"
+    },
     "is_recommended": false,
     "rating": 5.9,
     "quality_score": 99,
     "response_time": 1.6,
     "has_ssl": true,
     "has_mobile_meta": true,
-    "badges": [],
+    "badges": [
+      "MEST SOCIALA"
+    ],
     "specialties": [
       "Sömnoptimering",
       "Träningsspårning"
@@ -1973,7 +3295,7 @@ const siteData = [
   },
   {
     "name": "Vitaminbutiken",
-    "domain": "vitaminbutiken.com",
+    "domain": "vitaminbutiken.se",
     "categories": [
       "E-HANDEL"
     ],
@@ -1981,6 +3303,12 @@ const siteData = [
     "language": "Svenska",
     "description": "Vitaminbutiken är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
     "shortDescription": "Professionell e-handel-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/vitaminbutiken",
+      "instagram": "https://instagram.com/vitaminbutiken",
+      "youtube": "https://youtube.com/c/vitaminbutiken",
+      "twitter": "https://twitter.com/vitaminbutiken"
+    },
     "is_recommended": false,
     "rating": 4.8,
     "quality_score": 98,
@@ -2011,6 +3339,12 @@ const siteData = [
     "language": "English",
     "description": "The Joe Rogan Experience är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/joerogan",
+      "instagram": "https://instagram.com/joerogan",
+      "twitter": "https://twitter.com/joerogan",
+      "linkedin": "https://linkedin.com/company/joerogan"
+    },
     "is_recommended": false,
     "rating": 5.8,
     "quality_score": 98,
@@ -2042,6 +3376,11 @@ const siteData = [
     "language": "English",
     "description": "Health Optimization är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/healthoptimization",
+      "youtube": "https://youtube.com/c/healthoptimization",
+      "twitter": "https://twitter.com/healthoptimization"
+    },
     "is_recommended": false,
     "rating": 4.7,
     "quality_score": 97,
@@ -2074,6 +3413,10 @@ const siteData = [
     "language": "English",
     "description": "Health Transformation är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/healthtransformation",
+      "instagram": "https://instagram.com/healthtransformation"
+    },
     "is_recommended": false,
     "rating": 5.6,
     "quality_score": 96,
@@ -2106,6 +3449,11 @@ const siteData = [
     "language": "English",
     "description": "Calm är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/calm",
+      "youtube": "https://youtube.com/c/calm",
+      "twitter": "https://twitter.com/calm"
+    },
     "is_recommended": false,
     "rating": 5.6,
     "quality_score": 96,
@@ -2133,6 +3481,11 @@ const siteData = [
     "language": "English",
     "description": "Nutrition Science är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/nutritionscience",
+      "youtube": "https://youtube.com/c/nutritionscience",
+      "linkedin": "https://linkedin.com/company/nutritionscience"
+    },
     "is_recommended": false,
     "rating": 4.5,
     "quality_score": 95,
@@ -2166,6 +3519,12 @@ const siteData = [
     "language": "English",
     "description": "Peak Coaching erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/peakcoaching",
+      "instagram": "https://instagram.com/peakcoaching",
+      "youtube": "https://youtube.com/c/peakcoaching",
+      "linkedin": "https://linkedin.com/company/peakcoaching"
+    },
     "is_recommended": false,
     "rating": 5.5,
     "quality_score": 95,
@@ -2197,6 +3556,9 @@ const siteData = [
     "language": "English",
     "description": "MyFitnessPal är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/myfitnesspal"
+    },
     "is_recommended": false,
     "rating": 4.5,
     "quality_score": 95,
@@ -2226,6 +3588,11 @@ const siteData = [
     "language": "English",
     "description": "The Life Coach School är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/thelifecoachschool",
+      "youtube": "https://youtube.com/c/thelifecoachschool",
+      "linkedin": "https://linkedin.com/company/thelifecoachschool"
+    },
     "is_recommended": false,
     "rating": 5.4,
     "quality_score": 94,
@@ -2257,6 +3624,13 @@ const siteData = [
     "language": "English",
     "description": "Life Transformation erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/lifetransformation",
+      "instagram": "https://instagram.com/lifetransformation",
+      "youtube": "https://youtube.com/c/lifetransformation",
+      "twitter": "https://twitter.com/lifetransformation",
+      "linkedin": "https://linkedin.com/company/lifetransformation"
+    },
     "is_recommended": false,
     "rating": 5.4,
     "quality_score": 94,
@@ -2287,6 +3661,10 @@ const siteData = [
     "language": "Svenska",
     "description": "Gymgrossisten är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
     "shortDescription": "Professionell e-handel-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/gymgrossisten",
+      "youtube": "https://youtube.com/c/gymgrossisten"
+    },
     "is_recommended": false,
     "rating": 4.3,
     "quality_score": 93,
@@ -2349,6 +3727,12 @@ const siteData = [
     "language": "English",
     "description": "Mindfulness App är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/mindfulnessapp",
+      "instagram": "https://instagram.com/mindfulnessapp",
+      "twitter": "https://twitter.com/mindfulnessapp",
+      "linkedin": "https://linkedin.com/company/mindfulnessapp"
+    },
     "is_recommended": false,
     "rating": 5.3,
     "quality_score": 93,
@@ -2378,6 +3762,12 @@ const siteData = [
     "language": "English",
     "description": "The Tim Ferriss Show är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/tim",
+      "instagram": "https://instagram.com/tim",
+      "twitter": "https://twitter.com/tim",
+      "linkedin": "https://linkedin.com/company/tim"
+    },
     "is_recommended": false,
     "rating": 5.2,
     "quality_score": 92,
@@ -2385,7 +3775,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "POPULÄR"
+      "POPULÄR",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -2409,6 +3800,11 @@ const siteData = [
     "language": "English",
     "description": "Longevity Lab är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/longevitylab",
+      "instagram": "https://instagram.com/longevitylab",
+      "youtube": "https://youtube.com/c/longevitylab"
+    },
     "is_recommended": false,
     "rating": 4.2,
     "quality_score": 92,
@@ -2441,6 +3837,11 @@ const siteData = [
     "language": "English",
     "description": "Optimal Health är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/optimalhealth",
+      "instagram": "https://instagram.com/optimalhealth",
+      "twitter": "https://twitter.com/optimalhealth"
+    },
     "is_recommended": false,
     "rating": 5.2,
     "quality_score": 92,
@@ -2473,6 +3874,10 @@ const siteData = [
     "language": "English",
     "description": "Biohacker Collective är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/biohackercollective",
+      "youtube": "https://youtube.com/c/biohackercollective"
+    },
     "is_recommended": false,
     "rating": 5.1,
     "quality_score": 91,
@@ -2481,7 +3886,8 @@ const siteData = [
     "has_mobile_meta": true,
     "badges": [
       "POPULÄR",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -2505,6 +3911,11 @@ const siteData = [
     "language": "English",
     "description": "Wellness Transformation erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/wellnesstransformation",
+      "youtube": "https://youtube.com/c/wellnesstransformation",
+      "twitter": "https://twitter.com/wellnesstransformation"
+    },
     "is_recommended": false,
     "rating": 5.0,
     "quality_score": 90,
@@ -2535,6 +3946,12 @@ const siteData = [
     "language": "English",
     "description": "Vitality Lab är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/vitalitylab",
+      "instagram": "https://instagram.com/vitalitylab",
+      "twitter": "https://twitter.com/vitalitylab",
+      "linkedin": "https://linkedin.com/company/vitalitylab"
+    },
     "is_recommended": false,
     "rating": 5.9,
     "quality_score": 89,
@@ -2566,6 +3983,10 @@ const siteData = [
     "language": "English",
     "description": "Health Coaching Academy erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/healthcoachingacademy",
+      "youtube": "https://youtube.com/c/healthcoachingacademy"
+    },
     "is_recommended": false,
     "rating": 5.9,
     "quality_score": 89,
@@ -2597,6 +4018,12 @@ const siteData = [
     "language": "English",
     "description": "Health Monitor är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/healthmonitor",
+      "youtube": "https://youtube.com/c/healthmonitor",
+      "twitter": "https://twitter.com/healthmonitor",
+      "linkedin": "https://linkedin.com/company/healthmonitor"
+    },
     "is_recommended": false,
     "rating": 4.9,
     "quality_score": 89,
@@ -2624,6 +4051,12 @@ const siteData = [
     "language": "English",
     "description": "Meditation Master är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/meditationmaster",
+      "youtube": "https://youtube.com/c/meditationmaster",
+      "twitter": "https://twitter.com/meditationmaster",
+      "linkedin": "https://linkedin.com/company/meditationmaster"
+    },
     "is_recommended": false,
     "rating": 5.9,
     "quality_score": 89,
@@ -2651,6 +4084,9 @@ const siteData = [
     "language": "Svenska",
     "description": "Proteinkungen är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
     "shortDescription": "Professionell e-handel-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/proteinkungen"
+    },
     "is_recommended": false,
     "rating": 4.8,
     "quality_score": 88,
@@ -2658,7 +4094,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "SVENSKA"
+      "SVENSKA",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träningsutrustning",
@@ -2681,6 +4118,11 @@ const siteData = [
     "language": "Svenska",
     "description": "Svenskt Kosttillskott är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
     "shortDescription": "Professionell e-handel-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/svensktkosttillskott",
+      "instagram": "https://instagram.com/svensktkosttillskott",
+      "youtube": "https://youtube.com/c/svensktkosttillskott"
+    },
     "is_recommended": false,
     "rating": 4.6,
     "quality_score": 86,
@@ -2712,6 +4154,12 @@ const siteData = [
     "language": "Svenska",
     "description": "Hälsokost är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
     "shortDescription": "Professionell e-handel-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/halsokost",
+      "instagram": "https://instagram.com/halsokost",
+      "youtube": "https://youtube.com/c/halsokost",
+      "twitter": "https://twitter.com/halsokost"
+    },
     "is_recommended": false,
     "rating": 5.6,
     "quality_score": 86,
@@ -2744,6 +4192,11 @@ const siteData = [
     "language": "English",
     "description": "On Purpose with Jay Shetty är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/jayshetty",
+      "youtube": "https://youtube.com/c/jayshetty",
+      "linkedin": "https://linkedin.com/company/jayshetty"
+    },
     "is_recommended": false,
     "rating": 5.6,
     "quality_score": 86,
@@ -2776,6 +4229,11 @@ const siteData = [
     "language": "English",
     "description": "The Health Code är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/healthcode",
+      "instagram": "https://instagram.com/healthcode",
+      "youtube": "https://youtube.com/c/healthcode"
+    },
     "is_recommended": false,
     "rating": 4.5,
     "quality_score": 85,
@@ -2808,6 +4266,12 @@ const siteData = [
     "language": "Svenska",
     "description": "Hälsohem är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
     "shortDescription": "Professionell e-handel-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/halsohem",
+      "instagram": "https://instagram.com/halsohem",
+      "youtube": "https://youtube.com/c/halsohem",
+      "twitter": "https://twitter.com/halsohem"
+    },
     "is_recommended": false,
     "rating": 4.4,
     "quality_score": 84,
@@ -2816,7 +4280,8 @@ const siteData = [
     "has_mobile_meta": true,
     "badges": [
       "SVENSKA",
-      "HÖGKVALITET"
+      "HÖGKVALITET",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träningsutrustning",
@@ -2839,6 +4304,13 @@ const siteData = [
     "language": "English",
     "description": "FoundMyFitness är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/foundmyfitness",
+      "instagram": "https://instagram.com/foundmyfitness",
+      "youtube": "https://youtube.com/c/foundmyfitness",
+      "twitter": "https://twitter.com/foundmyfitness",
+      "linkedin": "https://linkedin.com/company/foundmyfitness"
+    },
     "is_recommended": false,
     "rating": 4.4,
     "quality_score": 84,
@@ -2871,6 +4343,11 @@ const siteData = [
     "language": "English",
     "description": "Workout Planner är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/workoutplanner",
+      "twitter": "https://twitter.com/workoutplanner",
+      "linkedin": "https://linkedin.com/company/workoutplanner"
+    },
     "is_recommended": false,
     "rating": 4.3,
     "quality_score": 83,
@@ -2878,7 +4355,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "HÖGKVALITET"
+      "HÖGKVALITET",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Sömnoptimering",
@@ -2900,6 +4378,13 @@ const siteData = [
     "language": "English",
     "description": "Noom erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/noom",
+      "instagram": "https://instagram.com/noom",
+      "youtube": "https://youtube.com/c/noom",
+      "twitter": "https://twitter.com/noom",
+      "linkedin": "https://linkedin.com/company/noom"
+    },
     "is_recommended": false,
     "rating": 5.2,
     "quality_score": 82,
@@ -2907,7 +4392,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "EXPERT"
+      "EXPERT",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Stresshantering",
@@ -2930,6 +4416,9 @@ const siteData = [
     "language": "English",
     "description": "Vitality Coaching erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/vitalitycoaching"
+    },
     "is_recommended": false,
     "rating": 4.2,
     "quality_score": 82,
@@ -2938,7 +4427,8 @@ const siteData = [
     "has_mobile_meta": true,
     "badges": [
       "EXPERT",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Stresshantering",
@@ -2961,6 +4451,10 @@ const siteData = [
     "language": "English",
     "description": "Peloton är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "youtube": "https://youtube.com/c/onepeloton",
+      "linkedin": "https://linkedin.com/company/onepeloton"
+    },
     "is_recommended": false,
     "rating": 4.2,
     "quality_score": 82,
@@ -2988,6 +4482,10 @@ const siteData = [
     "language": "English",
     "description": "The Wellness Show är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/wellnessshow",
+      "twitter": "https://twitter.com/wellnessshow"
+    },
     "is_recommended": false,
     "rating": 4.1,
     "quality_score": 81,
@@ -2995,7 +4493,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "POPULÄR"
+      "POPULÄR",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -3019,6 +4518,11 @@ const siteData = [
     "language": "English",
     "description": "Peak Performance är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/peakperformance",
+      "instagram": "https://instagram.com/peakperformance",
+      "youtube": "https://youtube.com/c/peakperformance"
+    },
     "is_recommended": false,
     "rating": 4.1,
     "quality_score": 81,
@@ -3050,6 +4554,11 @@ const siteData = [
     "language": "English",
     "description": "Tony Robbins erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/tonyrobbins",
+      "instagram": "https://instagram.com/tonyrobbins",
+      "twitter": "https://twitter.com/tonyrobbins"
+    },
     "is_recommended": false,
     "rating": 5.0,
     "quality_score": 80,
@@ -3081,6 +4590,11 @@ const siteData = [
     "language": "Svenska",
     "description": "Supplement Central är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
     "shortDescription": "Professionell e-handel-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/supplementcentral",
+      "instagram": "https://instagram.com/supplementcentral",
+      "youtube": "https://youtube.com/c/supplementcentral"
+    },
     "is_recommended": false,
     "rating": 4.9,
     "quality_score": 79,
@@ -3111,6 +4625,11 @@ const siteData = [
     "language": "English",
     "description": "Health & Life Mastery erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/healthlifemastery",
+      "instagram": "https://instagram.com/healthlifemastery",
+      "linkedin": "https://linkedin.com/company/healthlifemastery"
+    },
     "is_recommended": false,
     "rating": 5.9,
     "quality_score": 79,
@@ -3118,7 +4637,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "EXPERT"
+      "EXPERT",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Stresshantering",
@@ -3141,6 +4661,11 @@ const siteData = [
     "language": "English",
     "description": "Headspace är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/headspace",
+      "instagram": "https://instagram.com/headspace",
+      "youtube": "https://youtube.com/c/headspace"
+    },
     "is_recommended": false,
     "rating": 5.9,
     "quality_score": 79,
@@ -3168,6 +4693,12 @@ const siteData = [
     "language": "English",
     "description": "Fitness Coach App är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/fitnesscoachapp",
+      "youtube": "https://youtube.com/c/fitnesscoachapp",
+      "twitter": "https://twitter.com/fitnesscoachapp",
+      "linkedin": "https://linkedin.com/company/fitnesscoachapp"
+    },
     "is_recommended": false,
     "rating": 4.8,
     "quality_score": 78,
@@ -3195,6 +4726,10 @@ const siteData = [
     "language": "English",
     "description": "Wellness Coaching Pro erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/wellnesscoachingpro",
+      "instagram": "https://instagram.com/wellnesscoachingpro"
+    },
     "is_recommended": false,
     "rating": 5.6,
     "quality_score": 76,
@@ -3203,7 +4738,8 @@ const siteData = [
     "has_mobile_meta": true,
     "badges": [
       "EXPERT",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Stresshantering",
@@ -3226,6 +4762,12 @@ const siteData = [
     "language": "English",
     "description": "NutriGuide är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/nutriguide",
+      "instagram": "https://instagram.com/nutriguide",
+      "youtube": "https://youtube.com/c/nutriguide",
+      "linkedin": "https://linkedin.com/company/nutriguide"
+    },
     "is_recommended": false,
     "rating": 5.6,
     "quality_score": 76,
@@ -3233,7 +4775,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Sömnoptimering",
@@ -3255,6 +4798,11 @@ const siteData = [
     "language": "English",
     "description": "Brendon Burchard erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/brendon",
+      "instagram": "https://instagram.com/brendon",
+      "youtube": "https://youtube.com/c/brendon"
+    },
     "is_recommended": false,
     "rating": 5.5,
     "quality_score": 75,
@@ -3262,7 +4810,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "EXPERT"
+      "EXPERT",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Stresshantering",
@@ -3285,6 +4834,12 @@ const siteData = [
     "language": "English",
     "description": "Marie Forleo erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/mariforleo",
+      "instagram": "https://instagram.com/mariforleo",
+      "youtube": "https://youtube.com/c/mariforleo",
+      "linkedin": "https://linkedin.com/company/mariforleo"
+    },
     "is_recommended": false,
     "rating": 4.5,
     "quality_score": 75,
@@ -3316,6 +4871,11 @@ const siteData = [
     "language": "English",
     "description": "Elite Performance Coaching erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/eliteperformance",
+      "instagram": "https://instagram.com/eliteperformance",
+      "linkedin": "https://linkedin.com/company/eliteperformance"
+    },
     "is_recommended": false,
     "rating": 5.5,
     "quality_score": 75,
@@ -3323,7 +4883,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "EXPERT"
+      "EXPERT",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Stresshantering",
@@ -3413,6 +4974,12 @@ const siteData = [
     "language": "English",
     "description": "Happier with Gretchen Rubin är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/gretchenrubin",
+      "youtube": "https://youtube.com/c/gretchenrubin",
+      "twitter": "https://twitter.com/gretchenrubin",
+      "linkedin": "https://linkedin.com/company/gretchenrubin"
+    },
     "is_recommended": false,
     "rating": 5.4,
     "quality_score": 74,
@@ -3444,6 +5011,11 @@ const siteData = [
     "language": "English",
     "description": "Wellness Warriors är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/wellnesswarriors",
+      "instagram": "https://instagram.com/wellnesswarriors",
+      "youtube": "https://youtube.com/c/wellnesswarriors"
+    },
     "is_recommended": false,
     "rating": 5.4,
     "quality_score": 74,
@@ -3475,6 +5047,11 @@ const siteData = [
     "language": "Svenska",
     "description": "Bodystore är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
     "shortDescription": "Professionell e-handel-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/bodystore",
+      "instagram": "https://instagram.com/bodystore",
+      "linkedin": "https://linkedin.com/company/bodystore"
+    },
     "is_recommended": false,
     "rating": 4.3,
     "quality_score": 73,
@@ -3506,6 +5083,11 @@ const siteData = [
     "language": "Svenska",
     "description": "Naturkost är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
     "shortDescription": "Professionell e-handel-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/naturkost",
+      "instagram": "https://instagram.com/naturkost",
+      "youtube": "https://youtube.com/c/naturkost"
+    },
     "is_recommended": false,
     "rating": 4.2,
     "quality_score": 72,
@@ -3514,6 +5096,7 @@ const siteData = [
     "has_mobile_meta": true,
     "badges": [
       "SVENSKA",
+      "MEST SOCIALA",
       "PÅLITLIG"
     ],
     "specialties": [
@@ -3537,6 +5120,10 @@ const siteData = [
     "language": "Svenska",
     "description": "Rawfood Store är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
     "shortDescription": "Professionell e-handel-plattform",
+    "social_media": {
+      "youtube": "https://youtube.com/c/rawfoodstore",
+      "linkedin": "https://linkedin.com/company/rawfoodstore"
+    },
     "is_recommended": false,
     "rating": 4.2,
     "quality_score": 72,
@@ -3568,6 +5155,10 @@ const siteData = [
     "language": "English",
     "description": "The Model Health Show är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/themodelhealthshow",
+      "instagram": "https://instagram.com/themodelhealthshow"
+    },
     "is_recommended": false,
     "rating": 5.2,
     "quality_score": 72,
@@ -3599,6 +5190,11 @@ const siteData = [
     "language": "English",
     "description": "Optimal Living erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/optimalliving",
+      "twitter": "https://twitter.com/optimalliving",
+      "linkedin": "https://linkedin.com/company/optimalliving"
+    },
     "is_recommended": false,
     "rating": 4.2,
     "quality_score": 72,
@@ -3630,6 +5226,11 @@ const siteData = [
     "language": "English",
     "description": "Ben Greenfield Life är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/bengreenfield",
+      "instagram": "https://instagram.com/bengreenfield",
+      "youtube": "https://youtube.com/c/bengreenfield"
+    },
     "is_recommended": false,
     "rating": 5.1,
     "quality_score": 71,
@@ -3638,7 +5239,8 @@ const siteData = [
     "has_mobile_meta": true,
     "badges": [
       "POPULÄR",
-      "SNABB"
+      "SNABB",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -3662,6 +5264,12 @@ const siteData = [
     "language": "English",
     "description": "Health Mastery är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/healthmastery",
+      "instagram": "https://instagram.com/healthmastery",
+      "twitter": "https://twitter.com/healthmastery",
+      "linkedin": "https://linkedin.com/company/healthmastery"
+    },
     "is_recommended": false,
     "rating": 5.1,
     "quality_score": 71,
@@ -3669,7 +5277,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "POPULÄR"
+      "POPULÄR",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Träning",
@@ -3693,6 +5302,10 @@ const siteData = [
     "language": "English",
     "description": "Fitness Mindset är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
     "shortDescription": "Professionell podcast-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/fitnessmindset",
+      "youtube": "https://youtube.com/c/fitnessmindset"
+    },
     "is_recommended": false,
     "rating": 4.1,
     "quality_score": 71,
@@ -3724,6 +5337,12 @@ const siteData = [
     "language": "English",
     "description": "Performance Coaching erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/performancecoaching",
+      "youtube": "https://youtube.com/c/performancecoaching",
+      "twitter": "https://twitter.com/performancecoaching",
+      "linkedin": "https://linkedin.com/company/performancecoaching"
+    },
     "is_recommended": false,
     "rating": 5.1,
     "quality_score": 71,
@@ -3731,7 +5350,8 @@ const siteData = [
     "has_ssl": true,
     "has_mobile_meta": true,
     "badges": [
-      "EXPERT"
+      "EXPERT",
+      "MEST SOCIALA"
     ],
     "specialties": [
       "Stresshantering",
@@ -3754,6 +5374,11 @@ const siteData = [
     "language": "English",
     "description": "MindfulApp är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "instagram": "https://instagram.com/mindfulapp",
+      "youtube": "https://youtube.com/c/mindfulapp",
+      "twitter": "https://twitter.com/mindfulapp"
+    },
     "is_recommended": false,
     "rating": 5.1,
     "quality_score": 71,
@@ -3783,6 +5408,10 @@ const siteData = [
     "language": "English",
     "description": "Precision Nutrition erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
     "shortDescription": "Professionell coaching-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/precisionnutrition",
+      "twitter": "https://twitter.com/precisionnutrition"
+    },
     "is_recommended": false,
     "rating": 4.0,
     "quality_score": 70,
@@ -3813,6 +5442,10 @@ const siteData = [
     "language": "English",
     "description": "Strava är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
     "shortDescription": "Professionell apps-plattform",
+    "social_media": {
+      "facebook": "https://facebook.com/strava",
+      "twitter": "https://twitter.com/strava"
+    },
     "is_recommended": false,
     "rating": 4.0,
     "quality_score": 70,
@@ -3863,3 +5496,24 @@ const siteData = [
     ]
   }
 ];
+
+// Smarta filter för konsoliderad data
+const smartFilters = {
+    'SNABBAST': (sites) => sites.filter(site => site.response_time < 2.0),
+    'BUDGET': (sites) => sites.filter(site => site.priceRange && (site.priceRange.includes('Under') || site.priceRange === 'Gratis')),
+    'HÖGKVALITET': (sites) => sites.filter(site => site.quality_score >= 80),
+    'MEST SOCIALA': (sites) => sites.filter(site => Object.keys(site.social_media || {}).length >= 3),
+    'GRATIS': (sites) => sites.filter(site => site.priceRange === 'Gratis'),
+    'SVENSKA': (sites) => sites.filter(site => site.language === 'Svenska'),
+    'INTERNATIONELLA': (sites) => sites.filter(site => site.language === 'Engelska'),
+    'TRÄNING': (sites) => sites.filter(site => site.categories.some(cat => ['TRÄNING', 'FITNESS'].includes(cat))),
+    'WELLNESS': (sites) => sites.filter(site => site.categories.includes('WELLNESS')),
+    'COACHING': (sites) => sites.filter(site => site.categories.includes('COACHING')),
+    'MENTAL HÄLSA': (sites) => sites.filter(site => site.categories.some(cat => ['MENTAL_HÄLSA', 'MENTAL_HEALTH'].includes(cat))),
+    'PODDAR': (sites) => sites.filter(site => site.categories.includes('PODCAST'))
+};
+
+// Export för användning i andra moduler
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { siteData, smartFilters };
+}

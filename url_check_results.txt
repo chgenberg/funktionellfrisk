@@ -1,0 +1,213 @@
+URL Check Results - Tue Jul  1 07:36:46 CEST 2025
+=================================
+
+✅ betterhelp.com - https://www.betterhelp.com
+✅ talkspace.com - https://www.talkspace.com
+✅ mindfulness.com - https://mindfulness.com
+🔄 beachbody.com - REDIRECT 301 -> <html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>urllo</center>
+</body>
+</html>
+http://www.beachbody.com/
+🔄 dailyburn.com - REDIRECT 302 -> <html><body>You are being <a href="https://try.dailyburn.com/home_v3/?segment_anonymous_id=5366fd63-4c7a-45f9-b227-4e57e947d16d">redirected</a>.</body></html>https://try.dailyburn.com/home_v3/?segment_anonymous_id=5366fd63-4c7a-45f9-b227-4e57e947d16d
+❌ classpass.com - FAILED
+✅ 8fit.com - https://8fit.com
+❌ sworkit.com - FAILED
+✅ aaptiv.com - https://aaptiv.com
+✅ trainiac.com - https://www.trainiac.com
+✅ fitnessblender.com - https://www.fitnessblender.com
+🔄 weightwatchers.com - REDIRECT 301 -> https://www.weightwatchers.com/
+🔄 optavia.com - REDIRECT 301 -> <html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+</body>
+</html>
+https://www.optavia.com:443/
+✅ loseit.com - https://www.loseit.com
+✅ cronometer.com - https://cronometer.com
+✅ lifesum.com - https://lifesum.com
+✅ sparkpeople.com - https://www.sparkpeople.com
+✅ fatsecret.com - https://www.fatsecret.com
+✅ melrobbins.com - https://www.melrobbins.com
+🔄 zigziglar.com - REDIRECT 301 -> <a href="http://ziglar.com">Moved Permanently</a>.
+
+http://ziglar.com/
+✅ peak.net - https://peak.net
+✅ brainhq.com - https://www.brainhq.com
+✅ doctorondemand.com - https://doctorondemand.com
+✅ plushcare.com - https://plushcare.com
+🔄 hims.com - REDIRECT 301 -> Moved Permanentlyhttps://www.hims.com/
+✅ buddhify.com - https://buddhify.com
+✅ chriskresser.com - https://chriskresser.com
+✅ paleohacks.com - https://paleohacks.com
+✅ hubermanlab.com - https://www.hubermanlab.com
+✅ selfhacked.com - https://selfhacked.com
+🔄 mindfulnesspodden.se - REDIRECT 301 -> <!DOCTYPE html>
+<html style="height:100%">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title> 301 Moved Permanently
+</title><style>@media (prefers-color-scheme:dark){body{background-color:#000!important}}</style></head>
+<body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
+<div style="height:auto; min-height:100%; ">     <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
+        <h1 style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">301</h1>
+<h2 style="margin-top:20px;font-size: 30px;">Moved Permanently
+</h2>
+<p>The document has been permanently moved.</p>
+</div></div></body></html>
+https://yogamindonline.se/podd/
+✅ traning-och-halsa.se - https://traning-och-halsa.se
+✅ bengreenfieldlife.com - https://bengreenfieldlife.com
+🔄 mindpump.com - REDIRECT 301 -> <a href="https://www.mindpumpmedia.com/">Moved Permanently</a>.
+
+https://www.mindpumpmedia.com/
+✅ wellnessmama.com - https://wellnessmama.com
+✅ drchatterjee.com - https://drchatterjee.com
+✅ theenergyblueprint.com - https://theenergyblueprint.com
+🔄 theketokamp.com - REDIRECT 301 -> 
+❌ halsaplus.se - FAILED
+❌ coachakademin.se - FAILED
+❌ holistisk-coaching.se - FAILED
+🔄 livsstil.se - REDIRECT 301 -> https://www.livsstil.se/
+❌ halsocoach-sverige.se - FAILED
+❌ personlig-utveckling.se - FAILED
+✅ cerebral.com - https://cerebral.com
+🔄 nike.com - REDIRECT 301 -> https://www.nike.com/
+🔄 freeletics.com - REDIRECT 302 -> <html>
+<head><title>302 Found</title></head>
+<body>
+<center><h1>302 Found</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+https://www.freeletics.com/
+🔄 whoop.com - REDIRECT 308 -> Redirecting...
+https://www.whoop.com/
+🔄 lemonadehealth.com - REDIRECT 302 -> <a href="https://www.lemonaidhealth.com">Found</a>.
+
+https://www.lemonaidhealth.com/
+✅ accolade.com - https://www.accolade.com
+✅ yogaochhalsa.se - https://yogaochhalsa.se
+❌ starkfrisk.se - FAILED
+❌ halsoguiden.se - FAILED
+✅ functionalfoods.se - https://functionalfoods.se
+❌ mindfulness-coach.se - FAILED
+✅ livscoaching.se - https://www.livscoaching.se
+❌ halsavalmående.se - FAILED
+❌ wellness-sverige.se - FAILED
+❌ viktcoach.se - FAILED
+🔄 polar.com - REDIRECT 301 -> https://www.polar.com/
+✅ thefitnessview.com - https://thefitnessview.com
+🔄 kostdoktorn.se - REDIRECT 301 -> <html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+</body>
+</html>https://www.dietdoctor.com/se/
+❌ lifebalance-coaching.se - FAILED
+✅ kostradgivning.se - http://kostradgivning.se
+🔄 halsoliv.se - REDIRECT 301 -> https://www.expressen.se/halsoliv/
+❌ mindfulness-sverige.se - FAILED
+❌ halsotrender.se - FAILED
+❌ valmående.se - FAILED
+❌ lifecoach-sverige.se - FAILED
+✅ stresscoach.se - http://stresscoach.se
+❌ yoga-meditation.se - FAILED
+❌ wellness-coach.se - FAILED
+❌ wellness-coaching.se - FAILED
+❌ traningkost.se - FAILED
+❌ traningforalla.se - FAILED
+✅ holistiskhalsa.se - https://holistiskhalsa.se
+❌ traningscoach.se - FAILED
+❌ mentalbalans.se - FAILED
+✅ naturlighalsa.se - http://www.naturlighalsa.se
+❌ halsocoaching.se - FAILED
+❌ friskstark.se - FAILED
+❌ nutritionscoach.se - FAILED
+✅ mindpumpmedia.com - https://www.mindpumpmedia.com
+✅ bulletproof.com - https://www.bulletproof.com
+✅ wellness-journey.com - https://wellness-journey.com
+❌ wellness-tracker.com - FAILED
+✅ nutrition-tracker.com - https://nutrition-tracker.com
+🔄 vitaminbutiken.se - REDIRECT 301 -> <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vitaminbutiken.com/">here</a>.</p>
+</body></html>
+https://www.vitaminbutiken.com/
+✅ joerogan.com - https://www.joerogan.com
+❌ health-optimization.com - FAILED
+✅ health-transformation.com - https://health-transformation.com
+❌ calm.com - FAILED
+❌ nutrition-science.com - FAILED
+🔄 peak-coaching.com - REDIRECT 301 -> <html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+https://sedo.com/search/details/?domain=peak-coaching.com&campaignId=329145&origin=sales_lander_15
+✅ myfitnesspal.com - https://www.myfitnesspal.com
+✅ thelifecoachschool.com - https://www.thelifecoachschool.com
+✅ life-transformation.com - https://life-transformation.com
+✅ gymgrossisten.com - https://www.gymgrossisten.com
+✅ fitness-revolution.com - http://fitness-revolution.com
+✅ mindfulness-app.com - http://mindfulness-app.com
+✅ tim.blog - https://tim.blog
+✅ longevity-lab.com - https://longevity-lab.com
+❌ optimal-health.com - FAILED
+❌ biohacker-collective.com - FAILED
+✅ wellness-transformation.com - https://wellness-transformation.com
+❌ vitality-lab.com - FAILED
+❌ health-coaching-academy.com - FAILED
+❌ health-monitor.com - FAILED
+✅ meditation-master.com - http://meditation-master.com
+✅ proteinkungen.se - https://proteinkungen.se
+✅ svensktkosttillskott.se - https://www.svensktkosttillskott.se
+✅ halsokost.se - http://www.halsokost.se
+✅ jayshetty.me - https://www.jayshetty.me
+✅ health-code.com - https://health-code.com
+❌ halsohem.se - FAILED
+✅ foundmyfitness.com - https://www.foundmyfitness.com
+✅ workout-planner.com - http://workout-planner.com
+✅ noom.com - https://www.noom.com
+✅ vitality-coaching.com - https://www.vitality-coaching.com
+✅ onepeloton.com - https://www.onepeloton.com
+❌ wellness-show.com - FAILED
+❌ peak-performance.com - FAILED
+✅ tonyrobbins.com - https://www.tonyrobbins.com
+❌ supplement-central.se - FAILED
+❌ health-life-mastery.com - FAILED
+✅ headspace.com - https://www.headspace.com
+❌ fitness-coach-app.com - FAILED
+❌ wellness-coaching-pro.com - FAILED
+❌ nutri-guide.com - FAILED
+✅ brendon.com - https://brendon.com
+❌ mariforleo.com - FAILED
+✅ elite-performance.com - https://www.elite-performance.com
+✅ moodpath.com - https://www.moodpath.com
+✅ thewellnesswomen.com - https://thewellnesswomen.com
+✅ gretchenrubin.com - https://gretchenrubin.com
+🔄 wellness-warriors.com - REDIRECT 301 -> <a href="http://paulsteenburg.optavia.com">Moved Permanently</a>.
+
+http://paulsteenburg.optavia.com/
+✅ bodystore.com - https://www.bodystore.com
+✅ naturkost.se - https://www.naturkost.se
+❌ rawfood-store.se - FAILED
+✅ themodelhealthshow.com - https://themodelhealthshow.com
+✅ optimal-living.com - https://optimal-living.com
+✅ bengreenfield.com - https://bengreenfield.com
+✅ health-mastery.com - https://www.health-mastery.com
+❌ fitness-mindset.com - FAILED
+✅ performance-coaching.com - http://performance-coaching.com
+✅ mindful-app.com - https://mindful-app.com
+✅ precisionnutrition.com - https://www.precisionnutrition.com
+✅ strava.com - https://www.strava.com
+❌ fittracker-pro.com - FAILED

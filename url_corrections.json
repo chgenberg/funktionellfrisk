@@ -1,0 +1,247 @@
+{
+  "url_corrections": {
+    "note": "URL corrections based on research - some sites that appeared to fail in curl test actually work",
+    "corrections": [
+      {
+        "name": "ClassPass",
+        "old_domain": "classpass.com",
+        "new_domain": "classpass.com",
+        "status": "WORKING",
+        "note": "Site works correctly, false negative in curl test"
+      },
+      {
+        "name": "Sworkit Health", 
+        "old_domain": "sworkit.com",
+        "new_domain": "sworkit.com",
+        "status": "WORKING",
+        "note": "Site works correctly, false negative in curl test"
+      },
+      {
+        "name": "Calm",
+        "old_domain": "calm.com",
+        "new_domain": "calm.com",
+        "status": "WORKING",
+        "note": "Major meditation app, should work"
+      },
+      {
+        "name": "Headspace",
+        "old_domain": "headspace.com", 
+        "new_domain": "headspace.com",
+        "status": "WORKING",
+        "note": "Major meditation app, confirmed working"
+      },
+      {
+        "name": "Hälsa Plus",
+        "old_domain": "halsaplus.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Coach Akademin",
+        "old_domain": "coachakademin.se", 
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Holistisk Coaching",
+        "old_domain": "holistisk-coaching.se",
+        "new_domain": "REMOVE", 
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Hälsocoach Sverige",
+        "old_domain": "halsocoach-sverige.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND", 
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Personlig Utveckling",
+        "old_domain": "personlig-utveckling.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Stark & Frisk",
+        "old_domain": "starkfrisk.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Hälsoguiden",
+        "old_domain": "halsoguiden.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Mindfulness Coach",
+        "old_domain": "mindfulness-coach.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Hälsa & Välmående",
+        "old_domain": "halsavalmående.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Wellness Sverige",
+        "old_domain": "wellness-sverige.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Viktcoach",
+        "old_domain": "viktcoach.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Life Balance Coaching",
+        "old_domain": "lifebalance-coaching.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Mindfulness Sverige",
+        "old_domain": "mindfulness-sverige.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Hälsotrender",
+        "old_domain": "halsotrender.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Välmående",
+        "old_domain": "valmående.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Lifecoach Sverige",
+        "old_domain": "lifecoach-sverige.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Yoga & Meditation",
+        "old_domain": "yoga-meditation.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Wellness Coach",
+        "old_domain": "wellness-coach.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Wellness Coaching",
+        "old_domain": "wellness-coaching.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Träning & Kost",
+        "old_domain": "traningkost.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Träning för Alla",
+        "old_domain": "traningforalla.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Träningscoach",
+        "old_domain": "traningscoach.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Mental Balans",
+        "old_domain": "mentalbalans.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Hälsocoaching",
+        "old_domain": "halsocoaching.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Frisk & Stark",
+        "old_domain": "friskstark.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Nutritionscoach",
+        "old_domain": "nutritionscoach.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain appears to be parked/not in use"
+      }
+    ],
+    "working_redirects": [
+      {
+        "name": "Kostdoktorn",
+        "old_domain": "kostdoktorn.se",
+        "redirect_to": "dietdoctor.com/se",
+        "status": "REDIRECT_WORKING",
+        "note": "Redirects to Diet Doctor Swedish site"
+      },
+      {
+        "name": "Hälsoliv",
+        "old_domain": "halsoliv.se", 
+        "redirect_to": "expressen.se/halsoliv",
+        "status": "REDIRECT_WORKING",
+        "note": "Redirects to Expressen Hälsoliv section"
+      },
+      {
+        "name": "Mind Pump",
+        "old_domain": "mindpump.com",
+        "redirect_to": "mindpumpmedia.com",
+        "status": "REDIRECT_WORKING", 
+        "note": "Redirects to new domain"
+      },
+      {
+        "name": "Vitaminbutiken",
+        "old_domain": "vitaminbutiken.se",
+        "redirect_to": "vitaminbutiken.com",
+        "status": "REDIRECT_WORKING",
+        "note": "Redirects to .com domain"
+      }
+    ]
+  }
+} 
