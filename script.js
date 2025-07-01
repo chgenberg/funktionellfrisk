@@ -1001,3 +1001,4 @@ console.log('✨ AI-rekommendationer, smarta filter och avancerad sökning aktiv
 
 // Deploy trigger Tue Jul  1 14:55:45 CEST 2025
 console.log('🚀 DEPLOY FORCED - Tue Jul  1 15:54:27 CEST 2025');
+/* RAILPACK TEST - Tue Jul  1 22:44:43 CEST 2025 */
