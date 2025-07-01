@@ -965,3 +965,4 @@ document.addEventListener('DOMContentLoaded', function() {
 console.log('🚀 Avancerad hälsoplattform JavaScript laddat!');
 console.log('✨ AI-rekommendationer, smarta filter och avancerad sökning aktiverad');
 
+// Deploy trigger Tue Jul  1 14:55:45 CEST 2025
