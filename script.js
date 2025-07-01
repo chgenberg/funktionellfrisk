@@ -4,8 +4,29 @@
 let currentFilter = 'alla';
 let currentSmartFilter = null;
 let currentLanguageFilter = 'alla';
-let filteredData = [...siteData];
+let filteredData = [];
 let showPodcasts = false;
+
+// Force display all sites immediately when script loads
+function forceDisplayAllSites() {
+    if (typeof siteData !== 'undefined' && siteData.length > 0) {
+        console.log('🚀 Force displaying all sites immediately');
+        filteredData = [...siteData];
+        displaySites(filteredData);
+        return true;
+    }
+    return false;
+}
+
+// Try to display sites immediately
+if (!forceDisplayAllSites()) {
+    // If siteData not ready, wait for it
+    const waitForData = setInterval(() => {
+        if (forceDisplayAllSites()) {
+            clearInterval(waitForData);
+        }
+    }, 50);
+}
 
 // Initialize the platform
 document.addEventListener('DOMContentLoaded', function() {
