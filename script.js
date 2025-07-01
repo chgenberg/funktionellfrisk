@@ -1,19 +1,7 @@
 // SVERIGES MEST AVANCERADE HÄLSOJÄMFÖRELSEPLATTFORM
 // AI-driven recommendations & smart filtering
 
-// DEBUG: Check if siteData is available immediately
-console.log('🔍 DEBUG: Script loading...');
-console.log('🔍 DEBUG: typeof siteData:', typeof siteData);
-console.log('🔍 DEBUG: window.siteData:', typeof window.siteData);
-
-// Try to access siteData in different ways
-setTimeout(() => {
-    console.log('🔍 DEBUG after 100ms: typeof siteData:', typeof siteData);
-    console.log('🔍 DEBUG after 100ms: siteData length:', typeof siteData !== 'undefined' ? siteData.length : 'undefined');
-    if (typeof siteData !== 'undefined' && siteData.length > 0) {
-        console.log('🔍 DEBUG: First site:', siteData[0]);
-    }
-}, 100);
+// siteData loaded from site-data.js
 
 let currentFilter = 'alla';
 let currentSmartFilter = null;
@@ -21,25 +9,7 @@ let currentLanguageFilter = 'alla';
 let filteredData = [];
 let showPodcasts = false;
 
-// Smart filters definition (same as in site-data.js for compatibility)
-const smartFilters = {
-    'SNABBAST': (sites) => sites.filter(site => site.response_time && site.response_time < 0.5),
-    'BUDGET': (sites) => sites.filter(site => 
-        site.priceRange && (
-            site.priceRange.toLowerCase().includes('gratis') || 
-            site.priceRange.toLowerCase().includes('free') ||
-            site.priceRange.toLowerCase().includes('0') ||
-            (site.priceRange.match(/\d+/) && parseInt(site.priceRange.match(/\d+/)[0]) < 100)
-        )
-    ),
-    'HÖGKVALITET': (sites) => sites.filter(site => site.quality_score >= 85),
-    'GRATIS': (sites) => sites.filter(site => 
-        site.priceRange && (
-            site.priceRange.toLowerCase().includes('gratis') || 
-            site.priceRange.toLowerCase().includes('free')
-        )
-    )
-};
+// Smart filters are defined in site-data.js to avoid duplication
 
 // Force display all sites immediately when script loads
 function forceDisplayAllSites() {
@@ -825,13 +795,9 @@ function closeFilterPanel() {
 function updateFilterCounts() {
     // Check if siteData is available
     if (typeof siteData === 'undefined' || !siteData.length) {
-        console.log('🚨 DEBUG: siteData not available for filter counts');
-        console.log('🚨 DEBUG: typeof siteData:', typeof siteData);
-        console.log('🚨 DEBUG: siteData length:', typeof siteData !== 'undefined' ? siteData.length : 'undefined');
+        console.log('siteData not available for filter counts');
         return;
     }
-    
-    console.log('✅ DEBUG: Updating filter counts with', siteData.length, 'sites');
     
     // Update category counts
     const categories = {
