@@ -7,6 +7,26 @@ let currentLanguageFilter = 'alla';
 let filteredData = [];
 let showPodcasts = false;
 
+// Smart filters definition (same as in site-data.js for compatibility)
+const smartFilters = {
+    'SNABBAST': (sites) => sites.filter(site => site.response_time && site.response_time < 0.5),
+    'BUDGET': (sites) => sites.filter(site => 
+        site.priceRange && (
+            site.priceRange.toLowerCase().includes('gratis') || 
+            site.priceRange.toLowerCase().includes('free') ||
+            site.priceRange.toLowerCase().includes('0') ||
+            (site.priceRange.match(/\d+/) && parseInt(site.priceRange.match(/\d+/)[0]) < 100)
+        )
+    ),
+    'HÖGKVALITET': (sites) => sites.filter(site => site.quality_score >= 85),
+    'GRATIS': (sites) => sites.filter(site => 
+        site.priceRange && (
+            site.priceRange.toLowerCase().includes('gratis') || 
+            site.priceRange.toLowerCase().includes('free')
+        )
+    )
+};
+
 // Force display all sites immediately when script loads
 function forceDisplayAllSites() {
     if (typeof siteData !== 'undefined' && siteData.length > 0) {
@@ -52,6 +72,7 @@ function initializePlatformWithData() {
     setupSmartFilters();
     setupAdvancedSearch();
     setupPersonalizationEngine();
+    updateFilterCounts(); // Update filter counts when data is available
     
     console.log('🎯 Avancerad hälsoplattform initialiserad');
     console.log(`📊 Laddat ${siteData.length} sajter med fullständig data`);
@@ -225,6 +246,14 @@ function createSpecialtyTags(specialties) {
 function setupSmartFilters() {
     const filtersContainer = document.querySelector('.smart-filters');
     if (!filtersContainer) return;
+    
+    // Check if siteData is available
+    if (typeof siteData === 'undefined' || !siteData.length) {
+        console.log('siteData not available for smart filters');
+        return;
+    }
+    
+    console.log('Setting up smart filters with', siteData.length, 'sites');
     
     const filterButtons = Object.keys(smartFilters).map(filterKey => {
         const count = smartFilters[filterKey](siteData).length;
@@ -746,6 +775,14 @@ function closeFilterPanel() {
 }
 
 function updateFilterCounts() {
+    // Check if siteData is available
+    if (typeof siteData === 'undefined' || !siteData.length) {
+        console.log('siteData not available for filter counts');
+        return;
+    }
+    
+    console.log('Updating filter counts with', siteData.length, 'sites');
+    
     // Update category counts
     const categories = {
         'alla': siteData.length,
