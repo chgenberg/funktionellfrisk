@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jämför Hälsoföretag - Detaljerad jämförelse</title>
+    <meta name="description" content="Jämför hälsoföretag sida vid sida med kvalitetspoäng, hastighet, pris och specialiteter.">
+    <link rel="canonical" href="https://funktionellfrisk.se/compare.html">
+    <meta property="og:title" content="Jämför Hälsoföretag">
+    <meta property="og:description" content="Detaljerad jämförelse av hälsoplattformar.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://funktionellfrisk.se/compare.html">
+    <meta property="og:image" content="https://funktionellfrisk.se/assets/funktionell.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jämför Hälsoföretag">
+    <meta name="twitter:description" content="Detaljerad jämförelse av hälsoplattformar.">
+    <meta name="twitter:image" content="https://funktionellfrisk.se/assets/funktionell.png">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Jämförelse av hälsoföretag",
+      "itemListElement": []
+    }
+    </script>
     <style>
         .compare-container {
             max-width: 100%;
@@ -1028,13 +1048,16 @@
                 </svg>
                 <span>Visa alla företag</span>
             </button>
-            
             <button class="filter-btn" onclick="toggleCompareFilterPanel()">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <span>Filter</span>
             </button>
+            <label style="display:flex;align-items:center;gap:8px;">
+                <input type="checkbox" id="diffOnlyToggle" onchange="toggleDifferencesOnly(this.checked)">
+                <span>Visa bara skillnader</span>
+            </label>
         </div>
         
         <!-- Filter Panel for Compare Page -->
@@ -1148,6 +1171,7 @@
         let currentSmartFilter = null;
         let currentLanguageFilter = 'alla';
         let selectedSites = [];
+        let showDifferencesOnly = false;
         
         // Initialize comparison page
         document.addEventListener('DOMContentLoaded', function() {
@@ -1397,6 +1421,9 @@
             }
             
             grid.innerHTML = sites.map(site => createCompareCard(site)).join('');
+            if (showDifferencesOnly && sites.length > 1) {
+                hideEqualRows();
+            }
         }
         
         function createCompareCard(site) {
@@ -1459,7 +1486,7 @@
                     
                     
                     <div class="card-actions">
-                        <a href="https://${site.domain}" target="_blank" class="visit-btn">
+                        <a href="https://${site.domain}" target="_blank" rel="noopener noreferrer" class="visit-btn">
                             <span>BESÖK ${site.name.toUpperCase()}</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1560,6 +1587,34 @@
             
             loadComparisonCards();
             closeCompareFilterPanel();
+        }
+
+        function toggleDifferencesOnly(on) {
+            showDifferencesOnly = on;
+            loadComparisonCards();
+        }
+
+        function hideEqualRows() {
+            const cards = Array.from(document.querySelectorAll('.compare-card'));
+            if (cards.length < 2) return;
+            const rowSelectors = [
+                '.stat-row:nth-child(1) .stat-value',
+                '.stat-row:nth-child(2) .stat-value',
+                '.stat-row:nth-child(3) .stat-value',
+                '.stat-row:nth-child(4) .stat-value',
+                '.stat-row:nth-child(5) .stat-value',
+                '.stat-row:nth-child(6) .stat-value'
+            ];
+            rowSelectors.forEach((sel, idx) => {
+                const values = cards.map(c => c.querySelector(sel)?.textContent?.trim() || '');
+                const allEqual = values.every(v => v === values[0]);
+                if (allEqual) {
+                    cards.forEach(c => {
+                        const row = c.querySelector(`.stat-row:nth-child(${idx+1})`);
+                        if (row) row.style.display = 'none';
+                    });
+                }
+            });
         }
     </script>
 </body>

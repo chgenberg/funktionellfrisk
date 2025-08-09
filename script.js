@@ -122,28 +122,81 @@ function initializePlatform() {
 function displaySites(sites) {
     const container = document.getElementById('sites-container');
     if (!container) return;
-    
+
+    const skeleton = document.getElementById('skeleton');
+    if (skeleton) skeleton.style.display = 'grid';
+
     const sitesToShow = showPodcasts ? podcastData : sites;
-    
+
     // Sort with Swedish sites first, then by quality
     sitesToShow.sort((a, b) => {
-        // Swedish sites always come first
         if (a.language === 'Svenska' && b.language !== 'Svenska') return -1;
         if (a.language !== 'Svenska' && b.language === 'Svenska') return 1;
-        
-        // Then by recommendation status
         if (a.is_recommended && !b.is_recommended) return -1;
         if (!a.is_recommended && b.is_recommended) return 1;
-        
-        // Finally by quality score
         return b.quality_score - a.quality_score;
     });
-    
+
     container.innerHTML = sitesToShow.map(site => createAdvancedSiteCard(site)).join('');
-    
-    // Update stats
+
+    if (skeleton) skeleton.style.display = 'none';
+
     updatePlatformStats(sites);
+    updateActiveFilterChips();
 }
+
+function updateActiveFilterChips() {
+    const wrap = document.getElementById('activeFilters');
+    if (!wrap) return;
+    const chips = [];
+    if (currentFilter && currentFilter !== 'alla') chips.push({ key: 'category', label: currentFilter });
+    if (currentLanguageFilter && currentLanguageFilter !== 'alla') chips.push({ key: 'language', label: currentLanguageFilter });
+    if (currentSmartFilter) chips.push({ key: 'smart', label: currentSmartFilter });
+
+    if (chips.length === 0) {
+        wrap.classList.remove('show');
+        wrap.innerHTML = '';
+        return;
+    }
+
+    wrap.classList.add('show');
+    wrap.innerHTML = chips.map(c => `
+        <span class="filter-chip" data-type="${c.key}">
+            ${c.label}
+            <button aria-label="Ta bort filter ${c.label}" onclick="removeFilterChip('${c.key}')">×</button>
+        </span>
+    `).join('');
+}
+
+function removeFilterChip(type) {
+    if (type === 'category') {
+        currentFilter = 'alla';
+        document.querySelectorAll('#categoryFilters .filter-option').forEach(opt => opt.classList.remove('active'));
+        const el = document.querySelector('#categoryFilters [data-filter="alla"]'); if (el) el.classList.add('active');
+    } else if (type === 'language') {
+        currentLanguageFilter = 'alla';
+        document.querySelectorAll('#languageFilters .filter-option').forEach(opt => opt.classList.remove('active'));
+        const el = document.querySelector('#languageFilters [data-filter="alla"]'); if (el) el.classList.add('active');
+    } else if (type === 'smart') {
+        currentSmartFilter = null;
+        document.querySelectorAll('#smartFilterOptions .filter-option').forEach(opt => opt.classList.remove('active'));
+    }
+    applyLanguageFilter();
+}
+
+// Enhance combobox aria-expanded during autocomplete usage
+(function enhanceComboboxARIA(){
+    const input = document.getElementById('search-input');
+    if (!input) return;
+    const dropdown = document.getElementById('autocomplete-dropdown');
+    const setExpanded = (on) => input.setAttribute('aria-expanded', on ? 'true' : 'false');
+    const mo = new MutationObserver(() => {
+        if (!dropdown) return;
+        const visible = dropdown.classList.contains('show') || dropdown.style.display === 'block';
+        setExpanded(visible);
+    });
+    if (dropdown) mo.observe(dropdown, { attributes: true, attributeFilter: ['class','style'] });
+})();
 
 function createAdvancedSiteCard(site) {
     const badges = createBadges(site);

@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jämför Hälsocoaching - Sveriges bästa hälsocoaches</title>
+    <meta name="description" content="Jämför Sveriges bästa hälsocoacher. Filtrera, sortera och hitta rätt hälsoplattform för dig.">
+    <link rel="canonical" href="https://funktionellfrisk.se/">
+    <meta property="og:title" content="Jämför Hälsocoaching">
+    <meta property="og:description" content="Upptäck, jämför och välj rätt hälsocoach.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://funktionellfrisk.se/">
+    <meta property="og:image" content="https://funktionellfrisk.se/assets/funktionell.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jämför Hälsocoaching">
+    <meta name="twitter:description" content="Upptäck, jämför och välj rätt hälsocoach.">
+    <meta name="twitter:image" content="https://funktionellfrisk.se/assets/funktionell.png">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Funktionell Frisk",
+      "url": "https://funktionellfrisk.se/",
+      "description": "Jämför Sveriges bästa hälsocoacher",
+      "inLanguage": "sv-SE",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://funktionellfrisk.se/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="assets/funktionell.png" alt="Logo" class="logo">
+            <img src="assets/funktionell.png" alt="Logo" class="logo" width="180" height="180" fetchpriority="high">
             <p class="subtitle">DIN GUIDE TILL SVERIGES BÄSTA HÄLSOCOACHING</p>
         </header>
 
@@ -22,15 +49,15 @@
                 <div class="hero-content">
                     <h2>UPPTÄCK SVERIGES LEDANDE HÄLSOCOACHES</h2>
                     <p>Vi har rankat och jämfört de bästa hälsocoaching-sajterna för att hjälpa dig hitta rätt väg till bättre hälsa.</p>
-                    <div class="search-container">
-                        <input type="text" id="search-input" placeholder="Sök efter hälsocoach eller kategori..." class="search-input" autocomplete="off">
+                    <div class="search-container sticky-search">
+                        <input type="text" id="search-input" placeholder="Sök efter hälsocoach eller kategori..." class="search-input" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="autocomplete-dropdown" aria-autocomplete="list">
                         <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
                             <path d="m21 21-4.35-4.35"></path>
                         </svg>
-                        <div id="autocomplete-dropdown" class="autocomplete-dropdown"></div>
+                        <div id="autocomplete-dropdown" class="autocomplete-dropdown" role="listbox" aria-label="Sökförslag"></div>
                     </div>
-                    <div id="search-stats" class="search-stats" style="display: none;"></div>
+                    <div id="search-stats" class="search-stats" style="display: none;" aria-live="polite"></div>
                 </div>
                 <div id="platform-stats" class="stats-row">
                     <div class="stat-bubble">
@@ -52,10 +79,7 @@
                 </div>
             </section>
 
-            <!-- Personalized Recommendations Section -->
-            <section id="personalized-section" class="personalized-section" style="display: none;">
-                <!-- AI-generated recommendations will be inserted here -->
-            </section>
+            <section id="personalized-section" class="personalized-section" style="display: none;"></section>
 
             <section class="top-recommendations">
                 <div class="section-header">
@@ -70,9 +94,8 @@
                         <p class="category">HÄLSOCOACHING</p>
                         <p class="description">Sveriges ledande expert inom holistisk hälsocoaching med personlig approach och beprövade metoder.</p>
                         <div class="rating">⭐⭐⭐⭐⭐ 9.8/10</div>
-                        <a href="https://ulrikadavidsson.se" target="_blank" class="cta-button">BESÖK HEMSIDA</a>
+                        <a href="https://ulrikadavidsson.se" target="_blank" rel="noopener noreferrer" class="cta-button">BESÖK HEMSIDA</a>
                     </div>
-                    
                     <div class="card featured">
                         <div class="rank">#2</div>
                         <h4>Functional Foods</h4>
@@ -80,13 +103,11 @@
                         <p class="category">FUNCTIONAL FOODS</p>
                         <p class="description">Expertis inom funktionell nutrition och science-baserad hälsocoaching för optimal livskvalitet.</p>
                         <div class="rating">⭐⭐⭐⭐⭐ 9.7/10</div>
-                        <a href="https://functionalfoods.se" target="_blank" class="cta-button">BESÖK HEMSIDA</a>
+                        <a href="https://functionalfoods.se" target="_blank" rel="noopener noreferrer" class="cta-button">BESÖK HEMSIDA</a>
                     </div>
                 </div>
             </section>
 
-
-            
             <!-- Filter Panel -->
             <div class="filter-backdrop" onclick="closeFilterPanel()"></div>
             <div class="filter-panel" id="filterPanel">
@@ -94,7 +115,6 @@
                     <h3>Filtrera sajter</h3>
                     <button class="close-filter-btn" onclick="closeFilterPanel()">×</button>
                 </div>
-                
                 <div class="filter-section">
                     <h4>Kategorier</h4>
                     <div class="filter-options" id="categoryFilters">
@@ -124,7 +144,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="filter-section">
                     <h4>Språk</h4>
                     <div class="filter-options" id="languageFilters">
@@ -142,33 +161,20 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="filter-section">
                     <h4>Smarta filter</h4>
-                    <div class="filter-options" id="smartFilterOptions">
-                        <!-- Smart filters will be generated here -->
-                    </div>
+                    <div class="filter-options" id="smartFilterOptions"></div>
                 </div>
-                
                 <button class="reset-filters-btn" onclick="resetAllFilters()">Återställ alla filter</button>
             </div>
-            
-            <!-- Compare Button -->
-            <!-- Remove fixed compare button: 
-            <div class="compare-section">
-                <button class="compare-button" onclick="goToComparison()">
-                    <span>Jämför</span>
-                    <span class="compare-count" id="comparison-counter">0</span>
-                    <span class="arrow">→</span>
-                </button>
-            </div>
-            -->
+
+            <!-- Active filter chips -->
+            <div id="activeFilters" class="active-filters" aria-label="Aktiva filter"></div>
 
             <section class="all-sites">
                 <div class="section-header">
                     <h3>ALLA ANALYSERADE HÄLSOFÖRETAG</h3>
                 </div>
-                
                 <div class="main-controls">
                     <button class="filter-toggle-btn-inline" onclick="toggleFilterPanel()">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -183,9 +189,13 @@
                         <span>Jämför alla</span>
                     </a>
                 </div>
-                <div id="sites-container" class="sites-grid">
-                    <!-- Sites will be loaded here dynamically -->
+                <!-- Skeleton while loading -->
+                <div id="skeleton" class="skeleton-grid" style="display:none;">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
                 </div>
+                <div id="sites-container" class="sites-grid"></div>
             </section>
 
             <section class="newsletter-section">
@@ -201,7 +211,6 @@
         </main>
     </div>
 
-    <!-- Mobile actions bar -->
     <div class="mobile-actions-bar" aria-hidden="true">
         <button class="btn btn-secondary" onclick="toggleFilterPanel()">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -217,12 +226,11 @@
         </a>
     </div>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <p>Detta är en jämförelsesajt skapad av Functional Foods för att hjälpa dig ta rätt beslut när det kommer till din hälsa.</p>
     </footer>
 
-    <script src="site-data.js"></script>
-    <script src="script.js"></script>
+    <script src="site-data.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html> 
