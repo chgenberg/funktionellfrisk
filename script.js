@@ -824,6 +824,22 @@ function closeFilterPanel() {
     document.querySelector('.filter-backdrop').classList.remove('active');
 }
 
+// Close filter on backdrop click and on Esc
+document.addEventListener('click', function(e) {
+    const backdrop = document.querySelector('.filter-backdrop');
+    const panel = document.getElementById('filterPanel');
+    if (!backdrop || !panel) return;
+    if (backdrop.classList.contains('active') && e.target === backdrop) {
+        closeFilterPanel();
+    }
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeFilterPanel();
+    }
+});
+
 function updateFilterCounts() {
     // Check if siteData is available
     if (typeof siteData === 'undefined' || !siteData.length) {

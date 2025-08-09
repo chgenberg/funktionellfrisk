@@ -328,13 +328,13 @@ header {
 /* Cards Grid */
 .recommendation-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
 .sites-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
 }
 
@@ -1391,6 +1391,7 @@ header {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    body { padding-bottom: 90px; }
     /* Container and general layout */
     .container {
         padding: 0 16px;
@@ -1512,8 +1513,8 @@ header {
     
     /* Sites grid */
     .sites-grid {
+        grid-template-columns: 1fr;
         gap: 16px;
-        padding: 0;
     }
     
     /* Site cards */
@@ -1821,6 +1822,44 @@ header {
         font-size: 9px;
         padding: 2px 6px;
     }
+    /* Mobile actions bar */
+    .mobile-actions-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        display: flex;
+        gap: 12px;
+        z-index: 997; /* below filter overlays (panel: 999, backdrop: 998) */
+    }
+    .mobile-actions-bar .btn {
+        flex: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 16px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        border: 2px solid transparent;
+    }
+    .mobile-actions-bar .btn-primary {
+        background: var(--accent-green);
+        color: #fff;
+        border-color: var(--accent-green);
+    }
+    .mobile-actions-bar .btn-secondary {
+        background: transparent;
+        color: var(--accent-green);
+        border-color: var(--accent-green);
+    }
 }
 
 /* Extra small devices */
@@ -1901,6 +1940,13 @@ header {
     .compare-button {
         padding: 10px 14px;
         font-size: 12px;
+    }
+    .recommendation-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .sites-grid {
+        grid-template-columns: 1fr;
     }
 }
 

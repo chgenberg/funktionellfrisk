@@ -1120,7 +1120,23 @@
             </svg>
         </div>
     </div>
-    
+
+    <!-- Mobile actions bar -->
+    <div class="mobile-actions-bar" aria-hidden="true">
+        <button class="btn btn-secondary" onclick="toggleCompareFilterPanel()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Filter
+        </button>
+        <button class="btn btn-primary" onclick="showAllSites()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Visa alla
+        </button>
+    </div>
+
     <!-- Footer -->
     <footer class="site-footer">
         <p>Detta är en jämförelsesajt skapad av Functional Foods för att hjälpa dig ta rätt beslut när det kommer till din hälsa.</p>
@@ -1159,6 +1175,21 @@
                         `;
                     }
                 }, 1000);
+            }
+        });
+        
+        // Close compare filter on backdrop click and Esc
+        document.addEventListener('click', function(e) {
+            const backdrop = document.querySelector('.filter-backdrop');
+            const panel = document.getElementById('compareFilterPanel');
+            if (!backdrop || !panel) return;
+            if (backdrop.classList.contains('active') && e.target === backdrop) {
+                closeCompareFilterPanel();
+            }
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCompareFilterPanel();
             }
         });
         
@@ -1425,7 +1456,7 @@
                         </div>
                     ` : ''}
                     
-
+                    
                     
                     <div class="card-actions">
                         <a href="https://${site.domain}" target="_blank" class="visit-btn">
@@ -1466,7 +1497,7 @@
             `;
         }
         
-
+        
         
         // Utility functions (copied from script.js)
         function createStars(rating) {
