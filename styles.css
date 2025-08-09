@@ -2058,3 +2058,33 @@ header {
   /* Chips spacing */
   .active-filters { margin-top: 4px; }
 } 
+
+/* Prevent banner overlap on compare cards */
+.compare-card.recommended { padding-top: 56px; }
+/* Prevent banner overlap on site cards (index) */
+.site-card.recommended { padding-top: 36px; }
+
+/* Equalize action buttons on site cards */
+.site-actions .visit-btn { flex: 1; padding: 14px 24px; }
+.site-actions .compare-btn { flex: 1; padding: 14px 24px; }
+
+@media (max-width: 768px) {
+  /* Top recommendations heading sizing */
+  .section-header h3, .all-sites h3 {
+    font-size: 24px;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+  /* Featured cards in top recommendations */
+  .card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+  .rank {
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+  .recommendation-cards { gap: 12px; }
+} 
