@@ -211,6 +211,118 @@
         "new_domain": "REMOVE",
         "status": "NOT_FOUND",
         "note": "Domain appears to be parked/not in use"
+      },
+      {
+        "name": "Livsstil",
+        "old_domain": "livsstil.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain unavailable; remove"
+      },
+      {
+        "name": "Wellness Tracker",
+        "old_domain": "wellness-tracker.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain unavailable; remove"
+      },
+      {
+        "name": "Health Optimization",
+        "old_domain": "health-optimization.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
+      },
+      {
+        "name": "Nutrition Science",
+        "old_domain": "nutrition-science.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
+      },
+      {
+        "name": "Optimal Health",
+        "old_domain": "optimal-health.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
+      },
+      {
+        "name": "Vitality Lab",
+        "old_domain": "vitality-lab.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
+      },
+      {
+        "name": "Health Monitoring",
+        "old_domain": "health-monitor.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
+      },
+      {
+        "name": "Hälsohem",
+        "old_domain": "halsohem.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain unavailable; remove"
+      },
+      {
+        "name": "Wellness Show",
+        "old_domain": "wellness-show.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain unavailable; remove"
+      },
+      {
+        "name": "Supplement Central SE",
+        "old_domain": "supplement-central.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
+      },
+      {
+        "name": "Health Life Mastery",
+        "old_domain": "health-life-mastery.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
+      },
+      {
+        "name": "Fitness Coach App",
+        "old_domain": "fitness-coach-app.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
+      },
+      {
+        "name": "Wellness Coaching Pro",
+        "old_domain": "wellness-coaching-pro.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
+      },
+      {
+        "name": "Naturkost",
+        "old_domain": "naturkost.se",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "Domain unavailable; remove"
+      },
+      {
+        "name": "Fitness Mindset",
+        "old_domain": "fitness-mindset.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
+      },
+      {
+        "name": "Fittracker Pro",
+        "old_domain": "fittracker-pro.com",
+        "new_domain": "REMOVE",
+        "status": "NOT_FOUND",
+        "note": "No reliable official replacement"
       }
     ],
     "working_redirects": [
@@ -241,6 +353,62 @@
         "redirect_to": "vitaminbutiken.com",
         "status": "REDIRECT_WORKING",
         "note": "Redirects to .com domain"
+      },
+      {
+        "name": "Calm",
+        "old_domain": "calm.com",
+        "redirect_to": "www.calm.com",
+        "status": "REDIRECT_WORKING",
+        "note": "308 to www.calm.com"
+      },
+      {
+        "name": "Marie Forleo",
+        "old_domain": "mariforleo.com",
+        "redirect_to": "www.marieforleo.com",
+        "status": "REDIRECT_WORKING",
+        "note": "Official site"
+      },
+      {
+        "name": "Peak Performance",
+        "old_domain": "peak-performance.com",
+        "redirect_to": "www.peakperformance.com",
+        "status": "REDIRECT_WORKING",
+        "note": "Official brand domain"
+      },
+      {
+        "name": "Biohacker Collective",
+        "old_domain": "biohacker-collective.com",
+        "redirect_to": "biohackingcollective.com",
+        "status": "REDIRECT_WORKING",
+        "note": "Official site"
+      },
+      {
+        "name": "Rawfood Store",
+        "old_domain": "rawfood-store.se",
+        "redirect_to": "www.rawfoodshop.se",
+        "status": "REDIRECT_WORKING",
+        "note": "Swedish shop"
+      },
+      {
+        "name": "Health Coaching Academy",
+        "old_domain": "health-coaching-academy.com",
+        "redirect_to": "www.healthcoachesacademy.com",
+        "status": "REDIRECT_WORKING",
+        "note": "Official academy domain"
+      },
+      {
+        "name": "Nutri Guide",
+        "old_domain": "nutri-guide.com",
+        "redirect_to": "nutri.guide",
+        "status": "REDIRECT_WORKING",
+        "note": "Official program"
+      },
+      {
+        "name": "Keto Kamp",
+        "old_domain": "theketokamp.com",
+        "redirect_to": "www.ketokamp.com",
+        "status": "REDIRECT_WORKING",
+        "note": "Ben Azadi official"
       }
     ]
   }

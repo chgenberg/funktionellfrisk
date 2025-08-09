@@ -1,7 +1,7 @@
-// KONSOLIDERAD HÄLSOPLATTFORM DATABAS - CLEANED
-// Genererad: 2025-08-09 12:48:21
-// Totalt antal plattformar: 107
-// Status: Rensad från icke-fungerande sajter
+// KONSOLIDERAD HÄLSOPLATTFORM DATABAS - NO SOCIAL MEDIA
+// Genererad: 2025-07-01 07:49:47
+// Totalt antal plattformar: 123
+// Status: Rensad från icke-fungerande sajter och social media-data
 // Fokus: Holistisk hälsa och träning
 
 const siteData = [
@@ -1203,7 +1203,7 @@ const siteData = [
   },
   {
     "name": "Kamp Tidbits – Certified Health and Wellness Coach",
-    "domain": "www.ketokamp.com",
+    "domain": "theketokamp.com",
     "description": "",
     "shortDescription": "",
     "categories": [
@@ -1233,6 +1233,39 @@ const siteData = [
       "engelska"
     ],
     "source": "international_scraped"
+  },
+  {
+    "name": "Livsstil",
+    "domain": "livsstil.se",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Livsstil är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "is_recommended": true,
+    "rating": 4.7,
+    "quality_score": 97,
+    "response_time": 1.4,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "POPULÄR",
+      "HÖGKVALITET"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
   },
   {
     "name": "Online Mental Health Care That Caters to You",
@@ -1874,6 +1907,36 @@ const siteData = [
     ]
   },
   {
+    "name": "Wellness Tracker",
+    "domain": "wellness-tracker.com",
+    "categories": [
+      "APPS"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "Wellness Tracker är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
+    "shortDescription": "Professionell apps-plattform",
+    "is_recommended": false,
+    "rating": 5.9,
+    "quality_score": 99,
+    "response_time": 1.6,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SNABB",
+      "HÖGKVALITET"
+    ],
+    "specialties": [
+      "Sömnoptimering",
+      "Träningsspårning"
+    ],
+    "priceRange": "Gratis - 199 kr/månad",
+    "courses": 32,
+    "languages": [
+      "english"
+    ]
+  },
+  {
     "name": "Nutrition Tracker",
     "domain": "nutrition-tracker.com",
     "categories": [
@@ -1962,6 +2025,38 @@ const siteData = [
     ]
   },
   {
+    "name": "Health Optimization",
+    "domain": "health-optimization.com",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "Health Optimization är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "is_recommended": false,
+    "rating": 4.7,
+    "quality_score": 97,
+    "response_time": 1.4,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "POPULÄR",
+      "SNABB"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "english"
+    ]
+  },
+  {
     "name": "Health Transformation",
     "domain": "health-transformation.com",
     "categories": [
@@ -1995,7 +2090,7 @@ const siteData = [
   },
   {
     "name": "Calm",
-    "domain": "www.calm.com",
+    "domain": "calm.com",
     "categories": [
       "APPS"
     ],
@@ -2016,6 +2111,39 @@ const siteData = [
     ],
     "priceRange": "Gratis - 199 kr/månad",
     "courses": 32,
+    "languages": [
+      "english"
+    ]
+  },
+  {
+    "name": "Nutrition Science",
+    "domain": "nutrition-science.com",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "Nutrition Science är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "is_recommended": false,
+    "rating": 4.5,
+    "quality_score": 95,
+    "response_time": 1.2,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "POPULÄR",
+      "SNABB",
+      "HÖGKVALITET"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
     "languages": [
       "english"
     ]
@@ -2295,8 +2423,40 @@ const siteData = [
     ]
   },
   {
+    "name": "Optimal Health",
+    "domain": "optimal-health.com",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "Optimal Health är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "is_recommended": false,
+    "rating": 5.2,
+    "quality_score": 92,
+    "response_time": 0.9,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "POPULÄR",
+      "SNABB"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "english"
+    ]
+  },
+  {
     "name": "Biohacker Collective",
-    "domain": "biohackingcollective.com",
+    "domain": "biohacker-collective.com",
     "categories": [
       "PODCAST"
     ],
@@ -2357,8 +2517,39 @@ const siteData = [
     ]
   },
   {
+    "name": "Vitality Lab",
+    "domain": "vitality-lab.com",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "Vitality Lab är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "is_recommended": false,
+    "rating": 5.9,
+    "quality_score": 89,
+    "response_time": 0.6,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "POPULÄR"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "english"
+    ]
+  },
+  {
     "name": "Health Coaching Academy",
-    "domain": "www.healthcoachesacademy.com",
+    "domain": "health-coaching-academy.com",
     "categories": [
       "COACHING"
     ],
@@ -2383,6 +2574,33 @@ const siteData = [
     ],
     "priceRange": "$50 - $200/session",
     "courses": 11,
+    "languages": [
+      "english"
+    ]
+  },
+  {
+    "name": "Health Monitor",
+    "domain": "health-monitor.com",
+    "categories": [
+      "APPS"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "Health Monitor är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
+    "shortDescription": "Professionell apps-plattform",
+    "is_recommended": false,
+    "rating": 4.9,
+    "quality_score": 89,
+    "response_time": 0.6,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [],
+    "specialties": [
+      "Sömnoptimering",
+      "Träningsspårning"
+    ],
+    "priceRange": "Gratis - 199 kr/månad",
+    "courses": 32,
     "languages": [
       "english"
     ]
@@ -2572,6 +2790,37 @@ const siteData = [
     ]
   },
   {
+    "name": "Hälsohem",
+    "domain": "halsohem.se",
+    "categories": [
+      "E-HANDEL"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Hälsohem är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
+    "shortDescription": "Professionell e-handel-plattform",
+    "is_recommended": false,
+    "rating": 4.4,
+    "quality_score": 84,
+    "response_time": 1.6,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "HÖGKVALITET"
+    ],
+    "specialties": [
+      "Träningsutrustning",
+      "Naturprodukter",
+      "Kosttillskott"
+    ],
+    "priceRange": "99 - 999 kr",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
     "name": "FoundMyFitness",
     "domain": "foundmyfitness.com",
     "categories": [
@@ -2721,8 +2970,39 @@ const siteData = [
     ]
   },
   {
+    "name": "The Wellness Show",
+    "domain": "wellness-show.com",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "The Wellness Show är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "is_recommended": false,
+    "rating": 4.1,
+    "quality_score": 81,
+    "response_time": 1.3,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "POPULÄR"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "english"
+    ]
+  },
+  {
     "name": "Peak Performance",
-    "domain": "www.peakperformance.com",
+    "domain": "peak-performance.com",
     "categories": [
       "PODCAST"
     ],
@@ -2783,6 +3063,66 @@ const siteData = [
     ]
   },
   {
+    "name": "Supplement Central",
+    "domain": "supplement-central.se",
+    "categories": [
+      "E-HANDEL"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Supplement Central är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
+    "shortDescription": "Professionell e-handel-plattform",
+    "is_recommended": false,
+    "rating": 4.9,
+    "quality_score": 79,
+    "response_time": 1.1,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA"
+    ],
+    "specialties": [
+      "Träningsutrustning",
+      "Naturprodukter",
+      "Kosttillskott"
+    ],
+    "priceRange": "99 - 999 kr",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
+    "name": "Health & Life Mastery",
+    "domain": "health-life-mastery.com",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "Health & Life Mastery erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "is_recommended": false,
+    "rating": 5.9,
+    "quality_score": 79,
+    "response_time": 1.1,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "EXPERT"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "$50 - $200/session",
+    "courses": 11,
+    "languages": [
+      "english"
+    ]
+  },
+  {
     "name": "Headspace",
     "domain": "headspace.com",
     "categories": [
@@ -2810,8 +3150,66 @@ const siteData = [
     ]
   },
   {
+    "name": "Fitness Coach App",
+    "domain": "fitness-coach-app.com",
+    "categories": [
+      "APPS"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "Fitness Coach App är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
+    "shortDescription": "Professionell apps-plattform",
+    "is_recommended": false,
+    "rating": 4.8,
+    "quality_score": 78,
+    "response_time": 1.0,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [],
+    "specialties": [
+      "Sömnoptimering",
+      "Träningsspårning"
+    ],
+    "priceRange": "Gratis - 199 kr/månad",
+    "courses": 32,
+    "languages": [
+      "english"
+    ]
+  },
+  {
+    "name": "Wellness Coaching Pro",
+    "domain": "wellness-coaching-pro.com",
+    "categories": [
+      "COACHING"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "Wellness Coaching Pro erbjuder professionell coaching inom hälsa och livsstil med certifierade coaches och beprövade metoder.",
+    "shortDescription": "Professionell coaching-plattform",
+    "is_recommended": false,
+    "rating": 5.6,
+    "quality_score": 76,
+    "response_time": 0.8,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "EXPERT",
+      "SNABB"
+    ],
+    "specialties": [
+      "Stresshantering",
+      "Viktminskning",
+      "Personlig utveckling"
+    ],
+    "priceRange": "$50 - $200/session",
+    "courses": 11,
+    "languages": [
+      "english"
+    ]
+  },
+  {
     "name": "NutriGuide",
-    "domain": "nutri.guide",
+    "domain": "nutri-guide.com",
     "categories": [
       "APPS"
     ],
@@ -2870,7 +3268,7 @@ const siteData = [
   },
   {
     "name": "Marie Forleo",
-    "domain": "www.marieforleo.com",
+    "domain": "mariforleo.com",
     "categories": [
       "COACHING"
     ],
@@ -3088,8 +3486,39 @@ const siteData = [
     ]
   },
   {
+    "name": "Naturkost",
+    "domain": "naturkost.se",
+    "categories": [
+      "E-HANDEL"
+    ],
+    "country": "Sweden",
+    "language": "Svenska",
+    "description": "Naturkost är en pålitlig återförsäljare av hälsoprodukter, kosttillskott och träningsutrustning av högsta kvalitet.",
+    "shortDescription": "Professionell e-handel-plattform",
+    "is_recommended": false,
+    "rating": 4.2,
+    "quality_score": 72,
+    "response_time": 0.4,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SVENSKA",
+      "PÅLITLIG"
+    ],
+    "specialties": [
+      "Träningsutrustning",
+      "Naturprodukter",
+      "Kosttillskott"
+    ],
+    "priceRange": "99 - 999 kr",
+    "courses": 0,
+    "languages": [
+      "svenska"
+    ]
+  },
+  {
     "name": "Rawfood Store",
-    "domain": "www.rawfoodshop.se",
+    "domain": "rawfood-store.se",
     "categories": [
       "E-HANDEL"
     ],
@@ -3244,6 +3673,37 @@ const siteData = [
     ]
   },
   {
+    "name": "Fitness Mindset",
+    "domain": "fitness-mindset.com",
+    "categories": [
+      "PODCAST"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "Fitness Mindset är en ledande hälsopodcast som fokuserar på evidensbaserad information inom hälsa, träning och välmående.",
+    "shortDescription": "Professionell podcast-plattform",
+    "is_recommended": false,
+    "rating": 4.1,
+    "quality_score": 71,
+    "response_time": 0.3,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "POPULÄR"
+    ],
+    "specialties": [
+      "Träning",
+      "Mindfulness",
+      "Biohacking",
+      "Hälsa"
+    ],
+    "priceRange": "Gratis",
+    "courses": 0,
+    "languages": [
+      "english"
+    ]
+  },
+  {
     "name": "Performance Coaching",
     "domain": "performance-coaching.com",
     "categories": [
@@ -3360,5 +3820,63 @@ const siteData = [
     "languages": [
       "english"
     ]
+  },
+  {
+    "name": "FitTracker Pro",
+    "domain": "fittracker-pro.com",
+    "categories": [
+      "APPS"
+    ],
+    "country": "International",
+    "language": "English",
+    "description": "FitTracker Pro är en innovativ hälsoapp som hjälper användare att förbättra sin hälsa genom teknik och datadriven coaching.",
+    "shortDescription": "Professionell apps-plattform",
+    "is_recommended": false,
+    "rating": 4.0,
+    "quality_score": 70,
+    "response_time": 0.2,
+    "has_ssl": true,
+    "has_mobile_meta": true,
+    "badges": [
+      "SNABB"
+    ],
+    "specialties": [
+      "Sömnoptimering",
+      "Träningsspårning"
+    ],
+    "priceRange": "Gratis - 199 kr/månad",
+    "courses": 32,
+    "languages": [
+      "english"
+    ]
   }
 ];
+
+// Smart filters definition - using window global to avoid duplicate declaration errors
+console.log('🔧 Defining smartFilters object...');
+if (typeof window.smartFilters === 'undefined') {
+    window.smartFilters = {
+        'SNABBAST': (sites) => sites.filter(site => site.response_time && site.response_time < 0.5),
+        'BUDGET': (sites) => sites.filter(site => 
+            site.priceRange && (
+                site.priceRange.toLowerCase().includes('gratis') || 
+                site.priceRange.toLowerCase().includes('free') ||
+                site.priceRange.toLowerCase().includes('0') ||
+                (site.priceRange.match(/\d+/) && parseInt(site.priceRange.match(/\d+/)[0]) < 100)
+            )
+        ),
+        'HÖGKVALITET': (sites) => sites.filter(site => site.quality_score >= 85),
+        'GRATIS': (sites) => sites.filter(site => 
+            site.priceRange && (
+                site.priceRange.toLowerCase().includes('gratis') || 
+                site.priceRange.toLowerCase().includes('free')
+            )
+        )
+    };
+    console.log('✅ smartFilters defined successfully:', Object.keys(window.smartFilters));
+} else {
+    console.log('⚠️ smartFilters already exists, skipping redefinition');
+}
+
+// Make it available as smartFilters for backward compatibility
+var smartFilters = window.smartFilters;
